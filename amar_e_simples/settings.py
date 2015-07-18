@@ -156,7 +156,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'amar_e_simples',
-    'apps.event'
+    'apps.event',
+    'apps.titles'
 )
 
 LANGUAGES = (
