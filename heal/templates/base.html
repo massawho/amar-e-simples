@@ -33,6 +33,7 @@
     </head>
 
 	<body>
+		{% cms_toolbar %}
 		<!-- Main Menu -->
 		<div class="main-menu-container navbar-fixed-top">
 			<div id="main-menu" class="navbar navbar-default" role="navigation">
@@ -146,12 +147,7 @@
 					<div class="top-angle">
 					</div><!-- /.top-angle -->
 					<div class="container">
-						<div class="section-head">
-							<h2 class="section-title">Sobre</h2>
-							<p class="section-description">
-								Conheça nossa ONG e descubra várias formas de amar
-							</p><!-- /.section-description -->
-						</div><!-- /.section-head -->
+						{% placeholder "nossa_historia_titulo" %}
 
 						<div class="section-content">
 							<div class="row">
@@ -161,18 +157,11 @@
 											<span class="li_bulb"></span>
 										</div>
 									</div><!-- /.content-icon-hex -->
-									<h3 class="content-title">Nossa História</h3>
-									<p>
-										<strong>A ONG Amar é simples surgiu no ano de 2013 com o objetivo de motivar as pessoas a doarem seu tempo e suas habilidades. Hoje promovemos ações para mobilizar jovens interessados em ajudar o próximo e otimizamos otrabalho voluntario.</strong>
-									</p>
-									<p>
-                                        Segundo a pesquisa do Datafolha (2013), oito entre dez jovens no país nunca se envolveram com trabalhos voluntários. Pensando neste cenário, a organização visa contribuir para reverter o baixíssimo índice de voluntários jovens no Brasil. Os participantes da ONG podem realizar diversas ações, que vão desde a doação de sangue até projetos para auxiliar na recuperação de condenados.
-									</p>
-                                    <p><a class="btn custom-btn">Leia mais</a></p>
-                                </div><!-- /.content-box -->
+									{% placeholder "nossa_historia" %}
+                </div><!-- /.content-box -->
 
 								<div class="col-md-4">
-									<img src="{% static "images/sobre/01.jpg" %}">
+									{% placeholder "nossa_historia_extra" %}
 								</div><!-- /.media-content -->
 							</div><!-- row -->
 						</div><!-- /.section-content -->
@@ -305,29 +294,16 @@
 							<div class="section-content">
 								<div class="media-content media-left col-md-4 from-bottom delay-200">
 									<div class="meida-container">
-										<img src="./Heal HTML Template_files/volunteer.jpg" alt="volunteer">
+										{% placeholder "seja_voluntario_extra" %}
 									</div><!-- /.meida-container -->
 								</div><!-- /.media-content -->
-
-
 								<div class="content-box col-md-8 from-bottom delay-600">
 									<div class="hex content-icon-hex pull-left">
 										<div class="content-icon">
 											<span aria-hidden="true" class="li_user"></span>
 										</div>
 									</div><!-- /.content-icon-hex -->
-									<h3 class="content-title">Seja um voluntário</h3>
-									<p>
-										<strong>Você acredita que é simples amar o próximo? Para ser um voluntário basta estar disposto a compartilhar um pouco do seu amor e tempo.  Toda e qualquer habilidade, profissional ou não, é muito bem-vinda!</strong>
-									</p>
-									<p>
-										Primeiramente, você tem que aplicar para se tornar um voluntário, enviando suas informações (nome e e-mail). Vamos utilizar suas informações básicas para entraremos em contato com você, a partir de nossa ferramenta Bénevole. Dentro de alguns dias iremos enviar um e-mail com a plataforma para que você finalize as suas informações.  Por conseguinte, uma mensagem de confirmação será enviado para você.
-									</p>
-									<p>
-										<a href="#contato" class="btn custom-btn ">
-											Seja voluntário
-										</a>
-									</p>
+									{% placeholder "seja_voluntario" %}
 								</div><!-- /.content-box -->
 							</div><!-- /.section-content -->
 						</div><!-- /.row -->
