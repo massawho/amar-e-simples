@@ -129,10 +129,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'cms.context_processors.cms_settings'
 )
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'amar_e_simples', 'templates'),
-)
-
 INSTALLED_APPS = (
     'djangocms_admin_style',
     'djangocms_text_ckeditor',

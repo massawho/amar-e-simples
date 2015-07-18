@@ -1,0 +1,114 @@
+INPUT.miniColors {
+	margin-right: 4px;
+}
+
+.miniColors-selector {
+	position: absolute;
+	width: 187px;
+	height: 168px;
+	padding: 0px;
+	z-index: 999999;
+	background: url(http://thumbs.dreamstime.com/images2012/bkg_minicolors.png) no-repeat 0 0;
+}
+
+.miniColors.opacity.miniColors-selector {
+	width: 200px;
+}
+
+.miniColors-selector.black {
+	background: black;
+	border-color: black;
+}
+
+.miniColors-colors {
+	position: absolute;
+	top: 12px;
+	left: 6px;
+	width: 150px;
+	height: 150px;
+	background: url(http://thumbs.dreamstime.com/images2012/colors.png) -40px 0 no-repeat;
+	cursor: pointer;
+}
+
+.miniColors.opacity .miniColors-colors {
+	left: 30px;
+}
+
+.miniColors-hues {
+	position: absolute;
+	top: 10px;
+	left: 163px;
+	width: 13px;
+	height: 150px;
+	background: url(http://thumbs.dreamstime.com/images2012/colors.png) 0 0 no-repeat;
+	cursor: pointer;
+	border : 1px solid #ccc5c0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
+}
+
+.miniColors.opacity .miniColors-hues {
+	left: 185px;
+}
+
+.miniColors-opacity {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 150px;
+	background: url(http://thumbs.dreamstime.com/images2012/colors.png) -20px 0 no-repeat;
+	cursor: pointer;
+}
+
+.miniColors-colorPicker {
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	background: url(http://thumbs.dreamstime.com/images2012/color-picker.png) 0 0 no-repeat;
+}
+.miniColors-colorPicker-inner {
+	position: absolute;
+	top: 0;
+	left: 0; 
+	width: 7px;
+	height: 7px;
+}
+
+.miniColors-huePicker,
+.miniColors-opacityPicker {
+	position: absolute;
+	left: -5px;
+	width: 23px;
+	height: 15px;
+	margin-top: -1px;
+	background : url(http://thumbs.dreamstime.com/images2012/picker-arrow.gif) no-repeat 0 0;
+}
+
+.miniColors-trigger, 
+.miniColors-triggerWrap {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+}
+
+.miniColors-triggerWrap {
+	background: url(http://thumbs.dreamstime.com/images2012/trigger.png) -22px 0 no-repeat;
+	display: none;
+}
+
+.miniColors-triggerWrap.disabled {
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+
+.miniColors-trigger {
+	vertical-align: middle;
+	outline: none;
+	background: url(http://thumbs.dreamstime.com/images2012/trigger.png) 0 0 no-repeat;
+}
+
+.miniColors-triggerWrap.disabled .miniColors-trigger {
+	cursor: pointer;
+}

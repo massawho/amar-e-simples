@@ -1,0 +1,1241 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% page_attribute "page_title" %}{% endblock %}</title>
+
+        <meta name="description" content="Site da ONG amar é simples">
+        <meta name="keywords" content="ong amar é simples projeto social">
+        <meta name="author" content="https://plus.google.com/+JEFernandesJunior">
+
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+        {% render_block "css" %}
+        <!-- Boostrap -->
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+        <!-- icon fonts linecons -->
+        <link rel="stylesheet" href="{% static "css/linecons-font-style.css" %}">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <!-- Responsive Styles -->
+        <link rel="stylesheet" href="{% static "css/responsive.css" %}">
+        <!-- Important owl stylesheet -->
+        <link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
+        <!-- Important prettyPhoto stylesheet -->
+        <link rel="stylesheet" href="{% static "css/prettyPhoto.css" %}">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static "images/favicon.png" %}">
+    </head>
+
+	<body>
+		<!-- Main Menu -->
+		<div class="main-menu-container navbar-fixed-top">
+			<div id="main-menu" class="navbar navbar-default" role="navigation">
+				<div class="container">
+					
+					<div class="navbar-header">
+						<!-- responsive navigation -->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<i class="fa fa-bars"></i>
+						</button> <!-- /.navbar-toggle -->
+						<!-- Logo -->
+						<h1>
+							<a class="navbar-brand" href="index.html">
+								<img class="logo" src="{%  static "images/logo.png" %}" alt="Logo" rel="home">
+							</a><!-- /.navbar-brand -->
+						</h1>
+					</div> <!-- /.navbar-header -->
+
+					<nav class="collapse navbar-collapse">
+						<!-- Main navigation -->
+						<ul id="headernavigation" class="nav navbar-nav pull-right">
+							<li><a href="#sobre">Sobre</a></li>
+							<li><a href="#galeria">Galeria</a></li>
+							<li><a href="#projetos">Projetos</a></li>
+							<li><a href="#imprensa">Imprensa</a></li>
+							<li><a href="#upcoming-events">Events</a></li>
+							<li><a href="#contato">Contato</a></li>
+							<li><a href="#voluntario" class="donate">Bénévole</a></li>
+						</ul> <!-- /.nav .navbar-nav -->
+					</nav> <!-- /.navbar-collapse  -->
+				</div> <!-- /.container -->
+			</div><!-- /#main-menu -->
+		</div><!-- /.main-menu-container -->
+		<!-- Main Menu End -->
+
+
+
+
+		<!-- Top Slider -->
+		<section id="top-section">
+			<div class="top-section parallax-style">
+				<div class="parallax-overlay">
+					<div class="slider-txt-container">
+						<div id="top-carousel" class="carousel slide" data-ride="carousel">
+
+							<ol class="carousel-indicators">
+								<li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#top-carousel" data-slide-to="1"></li>
+								<li data-target="#top-carousel" data-slide-to="2"></li>
+							</ol><!-- /.carousel-indicators -->
+							<div class="carousel-inner">
+
+								<div class="item active">
+									<h2 class="thin-txt">
+										Buscamos incentivar jovens<br>
+										<span class="bold-txt">
+											a fazer o bem 
+										</span><br>
+										pela doação de tempo e habilidades
+									</h2><!-- /.thin-text -->
+
+									<p class="link">
+										<a href="#" class="btn custom-btn ">Saiba mais</a>
+									</p>
+								</div><!-- /.item -->
+
+								<div class="item">
+									<h2 class="thin-txt">
+										Queremos mudar a postura do<br>
+										<span class="bold-txt">
+											voluntariado jovem no Brasil
+										</span><br>
+										seja voluntário!
+									</h2>
+
+									<p class="link">
+										<a href="#" class="btn custom-btn ">Saiba mais</a>
+									</p>
+								</div><!-- /.item -->
+
+								<div class="item">
+									<h2 class="thin-txt">
+										Oito entre dez jovens no país<br>
+										<span class="bold-txt">
+											nunca se envolveram com trabalhos voluntários
+										</span><br>
+										Vamos mudar este cenário!
+									</h2><!-- /.thin-text -->
+
+									<p class="link">
+										<a href="#" class="btn custom-btn ">Seja voluntário</a>
+									</p>
+								</div><!-- /.item -->
+							</div><!-- /.carousel-inner -->
+							<a class="slide-nav left" href="#top-carousel" data-slide="prev"><span></span></a>
+							<a class="slide-nav right" href="#top-carousel" data-slide="next"><span></span></a>
+						</div><!-- /#top-carousel -->
+					</div><!-- /.slider-txt-container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.top-section -->
+		</section><!-- /#top-section -->
+		<!-- Top Slider End-->
+
+
+
+		<!-- About Section -->
+		<section id="sobre">
+			<div class="about-section"> 
+				<div class="white-bg  section-padding">
+					<div class="top-angle">
+					</div><!-- /.top-angle -->
+					<div class="container">
+						<div class="section-head">
+							<h2 class="section-title">Sobre</h2>
+							<p class="section-description">
+								Conheça nossa ONG e descubra várias formas de amar
+							</p><!-- /.section-description -->
+						</div><!-- /.section-head -->
+
+						<div class="section-content">
+							<div class="row">
+								<div class="content-box col-md-8 from-bottom delay-200">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span class="li_bulb"></span>
+										</div>
+									</div><!-- /.content-icon-hex -->
+									<h3 class="content-title">Nossa História</h3>
+									<p>
+										<strong>A ONG Amar é simples surgiu no ano de 2013 com o objetivo de motivar as pessoas a doarem seu tempo e suas habilidades. Hoje promovemos ações para mobilizar jovens interessados em ajudar o próximo e otimizamos otrabalho voluntario.</strong>
+									</p>
+									<p>
+                                        Segundo a pesquisa do Datafolha (2013), oito entre dez jovens no país nunca se envolveram com trabalhos voluntários. Pensando neste cenário, a organização visa contribuir para reverter o baixíssimo índice de voluntários jovens no Brasil. Os participantes da ONG podem realizar diversas ações, que vão desde a doação de sangue até projetos para auxiliar na recuperação de condenados.
+									</p>
+                                    <p><a class="btn custom-btn">Leia mais</a></p>
+                                </div><!-- /.content-box -->
+
+								<div class="col-md-4">
+									<img src="{% static "images/sobre/01.jpg" %}">
+								</div><!-- /.media-content -->
+							</div><!-- row -->
+						</div><!-- /.section-content -->
+					</div><!-- /.container -->
+				</div><!-- /.white-bg -->
+
+				<div class="gray-bg  section-padding">
+					<div class="top-angle"></div>
+					<div class="container">
+						<div class="row">
+							<div class="section-content">
+								<div class="media-content media-left col-md-4 from-bottom delay-200">
+									<div class="meida-container video-container">
+										<img src="{% static "images/logo_valores.png" %}">
+									</div><!-- /.meida-container -->
+								</div><!-- /.media-content -->
+
+								<div class="content-box col-md-8 from-bottom delay-600">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span class="li_eye"></span>
+										</div>
+									</div>
+									<h3 class="content-title">Nossa missão</h3>
+									<p>
+										<strong>Mudar a postura do voluntariado jovem no Brasil, promovendo caminhos de ação contínua, em que todos são tratados de igual para igual.</strong>
+									</p>
+									<p>
+										Buscamos incentivar os jovens a desenvolver sua capacidade de fazer o bem ao próximo pela doação do seu tempo e das suas habilidades. Procuramos apresentar o trabalho voluntário para cada novo integrante e esperamos que ele desenvolva o interesse por buscar parcerias, por coordenar propostas de trabalho e por incentivar voluntários em potencial a participar. Queremos multiplicar o voluntariado jovem no Brasil.
+									</p>
+								</div><!-- /.content-box -->
+							</div><!-- /.section-content -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+
+					<div class="bottom-angle">				
+					</div><!-- /.bottom-angle -->
+
+				</div><!-- ./gray-bg -->
+			</div><!-- /.about-section -->
+		</section><!-- /#about-->
+		<!-- About Section End -->
+
+
+
+		<!-- Services Section -->
+		<section id="service">
+			<div class="services-section white-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							O que fazemos
+						</h2>
+						<p class="section-description">
+							Os participantes da ONG podem realizar diversas ações, que vão desde doação de sangue até projetos para auxiliar na recuperação de condenados. A intenção é oferecer, a todos os grupos carentes da sociedade, capacitação, atividades culturais e de lazer constantemente!
+						</p>
+					</div><!-- /.section-head -->
+
+					<div class="section-content">
+						<div class="row">
+							<div class="col-md-4 from-bottom delay-200">
+								<div class="service-box">
+									<div class="hex service-icon-hex">
+										<div class="service-icon">
+											<span aria-hidden="true" class="li_star"></span>
+										</div><!-- /.service-icon -->
+									</div><!-- /.hex -->
+									<h3 class="service-title content-title">
+										Projetos anuais
+									</h3><!-- /.service-title content-title -->
+									<p class="service-description">
+										Eleições<br>Prevenção do câncer de mama<br>Salve vidas como um Super Herói
+									</p><!-- /.service-description -->
+
+									<div class="services-button">
+										<a href="#" class="btn custom-btn ">
+											Leia mais
+										</a>
+									</div><!-- /.services-button -->
+								</div><!-- /.service-box -->
+							</div><!-- /.col-md-4 -->
+
+							<div class="col-md-4 from-bottom delay-600">
+								<div class="service-box">
+									<div class="hex service-icon-hex">
+										<div class="service-icon">
+											<span aria-hidden="true" class="li_lab"></span>
+										</div><!-- /.service-icon -->
+									</div><!-- /.hex -->
+									<h3 class="service-title content-title">
+										Projetos mensais
+									</h3><!-- /.service-title content-title -->
+									<p class="service-description">
+										APAC Nova Lima<br>Contação de histórias<br>Felizes<br>Prosa sem idade
+									</p><!-- /.service-description -->
+
+									<div class="services-button">
+										<a href="#" class="btn custom-btn ">
+											Learn More
+										</a>
+									</div><!-- /.services-button -->
+								</div><!-- /.service-box -->
+							</div><!-- /.col-md-4 -->
+						</div><!-- /.row -->
+					</div><!-- /.section-content -->
+				</div><!-- /.container-->
+			</div><!-- /.services-section -->
+		</section><!-- /#services -->
+		<!--Services Section End-->
+
+
+
+		
+
+
+
+
+		<!-- Volunteer Section -->
+		<section id="voluntario">
+			<div class="volunteer-section">
+				<div class="gray-bg  section-padding">
+
+					<div class="top-angle">
+					</div><!-- /.top-angle -->
+
+					<div class="container">
+						<div class="row">
+							<div class="section-content">
+								<div class="media-content media-left col-md-4 from-bottom delay-200">
+									<div class="meida-container">
+										<img src="./Heal HTML Template_files/volunteer.jpg" alt="volunteer">
+									</div><!-- /.meida-container -->
+								</div><!-- /.media-content -->
+
+
+								<div class="content-box col-md-8 from-bottom delay-600">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span aria-hidden="true" class="li_user"></span>
+										</div>
+									</div><!-- /.content-icon-hex -->
+									<h3 class="content-title">Seja um voluntário</h3>
+									<p>
+										<strong>Você acredita que é simples amar o próximo? Para ser um voluntário basta estar disposto a compartilhar um pouco do seu amor e tempo.  Toda e qualquer habilidade, profissional ou não, é muito bem-vinda!</strong>
+									</p>
+									<p>
+										Primeiramente, você tem que aplicar para se tornar um voluntário, enviando suas informações (nome e e-mail). Vamos utilizar suas informações básicas para entraremos em contato com você, a partir de nossa ferramenta Bénevole. Dentro de alguns dias iremos enviar um e-mail com a plataforma para que você finalize as suas informações.  Por conseguinte, uma mensagem de confirmação será enviado para você.
+									</p>
+									<p>
+										<a href="#contato" class="btn custom-btn ">
+											Seja voluntário
+										</a>
+									</p>
+								</div><!-- /.content-box -->
+							</div><!-- /.section-content -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+					<div class="bottom-angle">
+					</div><!-- /.bottom-angle -->
+				</div><!-- ./gray-bg -->
+			</div><!-- /.volunteer-section -->
+		</section><!-- /#volunteer -->
+		<!-- Volunteer Section End -->
+
+
+
+
+		<!--Tweet Section-->
+		<div id="tweet-section">
+			<div class="tweet-section parallax-style">
+				<div class="parallax-overlay section-padding">
+					<div class="container">
+						<blockquote class="tweet-text">
+							Não é o que você faz, mas quanto amor você dedica no que faz que realmente importa.
+						</blockquote><!-- /.tweet-text -->
+						<p class="tweet-time">
+							Madre Teresa de Calcutá
+						</p><!-- /.tweet-time -->
+					</div><!-- /.container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.tweet-section -->
+		</div><!-- /.tweet-section -->
+		<!--Tweet Section End-->
+
+
+
+
+		<!-- Gallery Section -->
+		<section id="gallery">
+			<div class="gallery-section white-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							Gallery
+						</h2><!-- /.section-title -->
+						<p class="section-description">
+							TAKE A LOOK AT OUR GALLERY TO SEE HOW WE ENDANGER THE CHILD. YOU MAY ALSO SEE OUR WORLDWIDE ACTIVITY AROUND THE GLOBE HOW WE WORKING FOR CHILDREN. 
+						</p>
+					</div><!-- /.section-head -->
+
+					<div id="gallery-container" class="gallery-container">
+						<div class="galleryFilter">
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter="" class="current">All</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-1">Charity</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-2">Nature</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-3">Wildlife</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-4">Video</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-5">Children</a>
+						</div> <!-- /.galleryFilter -->
+
+						<div class="gallery-item element-from-bottom isotope" style="position: relative; overflow: hidden; height: 400px;">
+							<figure class="item cat-3 cat-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-1.jpg" alt="Item 3">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-1.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-2 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(285px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-2.jpg" alt="Item 4">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-2.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-1 cat-2 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(570px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-3.jpg" alt="Item 1">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-3.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-1 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(855px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-4.jpg" alt="Item 2">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-4.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-3 cat-1 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-5.jpg" alt="Item 5">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-5.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-4 cat-1 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(285px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-6.jpg" alt="Item 6">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-6.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-3 cat-1 cat-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(570px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-7.jpg" alt="Item 7">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-7.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-4 cat-2 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(855px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-8.jpg" alt="Item 7">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-8.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+						</div><!-- /.gallery-item -->
+					</div><!-- /gallery-container -->
+				</div><!-- /.container -->
+			</div><!-- /.gallery-section -->
+		</section><!-- /#gallery -->
+		<!-- Gallery Section End -->
+
+
+
+
+		<!--Projetos Section-->
+		<section id="projetos">
+			<div class="causes-section gray-bg   section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4"> 
+							<div class="content-box">
+								<div class="hex content-icon-hex hex-margin">
+									<div class="content-icon">
+										<span aria-hidden="true" class="li_megaphone"></span>
+									</div>
+								</div>
+								<h3 class="content-title">
+									Nossos projetos
+								</h3>
+								<p class="content-description"> 
+									We have a fixed plan to improve the child world. Moreover, we are careful about the sudden disaster and harmful environment.
+								</p>
+								<div class="slide-nav-container">
+									<a class="slide-nav left slide-left" href="#causes-post-slider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+									<a class="slide-nav right slide-right" href="#causes-post-slider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+								</div><!-- /.slide-nav-container -->
+							</div><!-- /.content-box --> 
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-8">
+							<div class="row">
+								<div id="causes-post-slider"  class="owl-carousel owl-theme">
+									<div class="item col-md-12">
+										<div class="causes-post">
+											<figure>
+												<img src="images/causes-post-image/post-1.jpg" alt="Post Image">
+												<figcaption>
+													<div class="caption-txt">
+														<span class="donated">66% Donated</span>
+														<span class="to-go">/ $10,014 To Go</span>
+													</div>
+
+													<div class="progress">
+														<div id="causes-progress-1" class="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+															<span class="sr-only">60% Complete (warning)</span>
+														</div>
+													</div><!-- /.progress -->
+												</figcaption>
+											</figure>	
+											<h3 class="causes-post-title">
+												the causes title goes here
+											</h3><!-- /.causes-post-title -->
+											<p class="post-text">
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
+											</p><!-- /.post-text -->
+											<a class="btn donate-btn" href="#">
+												Donate Now
+											</a>
+										</div><!-- /.causes-post -->
+									</div><!-- /.item col-md-12 -->
+
+									<div class="item col-md-12">
+										<div class="causes-post">
+											<figure>
+												<img src="images/causes-post-image/post-2.jpg" alt="Post Image">
+												<figcaption>
+													<div class="caption-txt">
+														<span class="donated">66% Donated</span>
+														<span class="to-go">/ $10,014 To Go</span>
+													</div>
+
+													<div class="progress">
+														<div id="causes-progress-2" class="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+															<span class="sr-only">60% Complete (warning)</span>
+														</div>
+													</div><!-- /.progress -->
+												</figcaption>
+											</figure>	
+											<h3 class="causes-post-title">
+												the causes title goes here
+											</h3><!-- /.causes-post-title -->
+											<p class="post-text">
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
+											</p><!-- /.post-text -->
+											<a class="btn donate-btn" href="#">
+												Donate Now
+											</a>
+										</div><!-- /.causes-post -->
+									</div><!-- /.item col-md-12 -->
+									<div class="item col-md-12">
+										<div class="causes-post">
+											<figure>
+												<img src="images/causes-post-image/post-3.jpg" alt="Post Image">
+												<figcaption>
+													<div class="caption-txt">
+														<span class="donated">66% Donated</span>
+														<span class="to-go">/ $10,014 To Go</span>
+													</div>
+
+													<div class="progress">
+														<div id="causes-progress-3" class="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+															<span class="sr-only">60% Complete (warning)</span>
+														</div>
+													</div><!-- /.progress -->
+												</figcaption>
+											</figure>	
+											<h3 class="causes-post-title">
+												the causes title goes here
+											</h3><!-- /.causes-post-title -->
+											<p class="post-text">
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
+											</p><!-- /.post-text -->
+											<a class="btn donate-btn" href="#">
+												Donate Now
+											</a>
+										</div><!-- /.causes-post -->
+									</div><!-- /.item col-md-12 -->
+
+									<div class="item col-md-12">
+										<div class="causes-post">
+											<figure>
+												<img src="images/causes-post-image/post-4.jpg" alt="Post Image">
+												<figcaption>
+													<div class="caption-txt">
+														<span class="donated">66% Donated</span>
+														<span class="to-go">/ $10,014 To Go</span>
+													</div>
+
+													<div class="progress">
+														<div id="causes-progress-4" class="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+															<span class="sr-only">60% Complete (warning)</span>
+														</div>
+													</div><!-- /.progress -->
+												</figcaption>
+											</figure>	
+											<h3 class="causes-post-title">
+												the causes title goes here
+											</h3><!-- /.causes-post-title -->
+											<p class="post-text">
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class
+											</p><!-- /.post-text -->
+											<a class="btn donate-btn" href="#">
+												Donate Now
+											</a>
+										</div><!-- /.causes-post -->
+									</div><!-- /.item col-md-12 -->
+
+								</div><!-- /.causes-post-slider -->
+							</div><!-- /row -->
+						</div><!-- /.col-md-8 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+				<div class="bottom-angle"></div>
+			</div><!-- /.causes-section -->
+		</section><!-- /#causes -->
+		<!--Causes Section End-->
+
+
+
+		<!--News Section-->
+		<section id="imprensa">
+			<div class="news-section white-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							Imprensa
+						</h2><!-- /.section-title -->
+						<p class="section-description">
+							A Amar é simples está sempre agindo! Dê uma olhada nas matérias de jornais que já saímos!
+						</p>
+					</div><!-- /.section-head -->
+
+					<div class="row">
+						<div class="news-container">
+							<div class="news-item col-md-6 from-bottom delay-200">
+								<img class="news-item-image" src="./Heal HTML Template_files/news-post-1.jpg" alt="News Post Image">
+								<article class="news-article">
+									<div class="article-container">
+										<div class="post-meta">
+											<div class="meta-icon">
+												<span>
+													<i class="fa fa-film"></i>
+												</span>
+											</div>
+
+											<time datetime="2014-02-21">21 Feb'14</time>
+											<span class="name">
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">John Doe</a>
+											</span>
+											<span>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">24 Comments</a>
+											</span>
+										</div><!-- /.post-meta -->
+										<div class="post-details">
+											<h3 class="content-title">Blog Post Title Goes Here</h3>
+											<p>
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. 
+											</p>
+											<div>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/blog-single.html" class="btn custom-btn ">Read More</a>
+											</div>
+										</div><!-- /.post-details -->
+									</div><!-- /.article-container -->
+								</article><!-- /.news-article -->
+							</div><!-- /.news-item -->
+
+							<div class="news-item col-md-6 from-bottom delay-600">
+								<img class="news-item-image" src="./Heal HTML Template_files/news-post-2.jpg" alt="News Post Image">
+								<article class="news-article">
+									<div class="article-container">
+										<div class="post-meta">
+											<div class="meta-icon">
+												<span>
+													<i class="fa fa-picture-o"></i>
+												</span>
+											</div>
+											<time datetime="2014-02-21">21 Feb'14</time>
+											<span class="name">
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">John Doe</a>
+											</span>
+											<span>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">24 Comments</a>
+											</span>
+										</div><!-- /.post-meta -->
+										<div class="post-details">
+											<h3 class="content-title">Blog Post Title Goes Here</h3>
+											<p>
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. 
+											</p>
+											<div>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/blog-single.html" class="btn custom-btn ">Read More</a>
+											</div>
+										</div><!-- /.post-details -->
+									</div><!-- /.article-container -->
+								</article><!-- /.news-article -->
+							</div><!-- /.news-item -->
+
+							<div class="news-item col-md-6 from-bottom delay-200">
+								<img class="news-item-image" src="./Heal HTML Template_files/news-post-3.jpg" alt="News Post Image">
+								<article class="news-article">
+									<div class="article-container">
+										<div class="post-meta">
+											<div class="meta-icon">
+												<span>
+													<i class="fa fa-film"></i>
+												</span>
+											</div>
+											<time datetime="2014-02-21">21 Feb'14</time>
+											<span class="name">
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">John Doe</a>
+											</span>
+											<span>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">24 Comments</a>
+											</span>
+										</div><!-- /.post-meta -->
+										<div class="post-details">
+											<h3 class="content-title">Blog Post Title Goes Here</h3>
+											<p>
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. 
+											</p>
+											<div>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/blog-single.html" class="btn custom-btn ">Read More</a>
+											</div>
+
+										</div><!-- /.post-details -->
+									</div><!-- /.article-container -->
+								</article><!-- /.news-article -->
+							</div><!-- /.news-item -->
+
+							<div class="news-item col-md-6 from-bottom delay-600">
+								<img class="news-item-image" src="./Heal HTML Template_files/news-post-4.jpg" alt="News Post Image">
+								<article class="news-article">
+									<div class="article-container">
+										<div class="post-meta">
+											<div class="meta-icon">
+												<span>
+													<i class="fa fa-headphones"></i>
+												</span>
+											</div>
+											<time datetime="2014-02-21">21 Feb'14</time>
+											<span class="name">
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">John Doe</a>
+											</span>
+											<span>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/#">24 Comments</a>
+											</span>
+										</div><!-- /.post-meta -->
+										<div class="post-details">
+											<h3 class="content-title">Blog Post Title Goes Here</h3>
+											<p>
+												Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. 
+											</p>
+											<div>
+												<a href="http://demos.codexcoder.com/heal/heal-v2/blog-single.html" class="btn custom-btn ">Read More</a>
+											</div>
+										</div><!-- /.post-details -->
+									</div><!-- /.article-container -->
+								</article><!-- /.news-article -->
+							</div><!-- /.news-item -->
+							<div class="view-all">
+								<a href="http://demos.codexcoder.com/heal/heal-v2/blog-page.html" class="btn custom-btn ">View All News</a>
+							</div>
+						</div><!-- /.news-container -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.news-section -->
+		</section><!-- /#news -->
+		<!--News Section End-->
+
+
+
+
+
+		<!-- Upcoming Events Section -->
+		<section id="upcoming-events">
+			<div class="upcoming-events-section gray-bg  section-padding">
+
+				<div class="top-angle"></div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="content-box">
+								<div class="hex content-icon-hex hex-margin">
+									<div class="content-icon">
+										<span aria-hidden="true" class="li_calendar"></span>
+									</div><!-- /.content-icon -->
+								</div><!-- /.content-icon-hex -->
+								<h3 class="content-title">
+									Próximas ações
+								</h3>
+								<p class="content-description"> 
+									We create events aiming to spear the voice for children and gather for support. Please update with our events and confirm your presence.
+								</p>
+							</div><!-- /.content-box -->
+
+							<div class="slide-nav-container customNavigation">
+								<a class="slide-nav left slide-left" href="#event-post-slider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+								<a class="slide-nav right slide-right" href="#event-post-slider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+							</div><!-- /.slide-nav-container -->
+						</div><!-- /.col-md-4 -->
+
+						<div class="col-md-8">
+							<div class="row">
+								<div class="event-container">
+									<div id="event-post-slider"  class="owl-carousel owl-theme">
+
+										<div class="item col-md-12">
+											<div class="event-content">
+												<h4 class="content-title">
+													<a href="#">Event Title Goes Here</a>
+												</h4><!-- /.event-title -->
+												<div class="event-date-time-place">
+													<time datetime="2014-06-30">
+														<span><i class="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
+													</time>
+
+													<span><i class="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
+												</div> 
+												<div class="event-img">
+													<img src="images/event-post-image/post-1.jpg" alt="Event Post">
+												</div><!-- /.event-img -->
+											</div><!-- /.event-content  -->
+										</div><!-- /.item col-md-12 -->
+
+										<div class="item col-md-12">
+											<div class="event-content">
+												<h4 class="content-title">
+													<a href="#">Event Title Goes Here</a>
+												</h4><!-- /.event-title -->
+												<div class="event-date-time-place">
+													<time datetime="2014-06-30">
+														<span><i class="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
+													</time>
+
+													<span><i class="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
+												</div> 
+												<div class="event-img">
+													<img src="images/event-post-image/post-2.jpg" alt="Event Post">
+												</div><!-- /.event-img -->
+											</div><!-- /.event-content  -->
+										</div><!-- /.item col-md-12 -->
+
+										<div class="item col-md-12">
+											<div class="event-content">
+												<h4 class="content-title">
+													<a href="#">Event Title Goes Here</a>
+												</h4><!-- /.event-title -->
+												<div class="event-date-time-place">
+													<time datetime="2014-06-30">
+														<span><i class="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
+													</time>
+													
+													<span><i class="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
+												</div> 
+												<div class="event-img">
+													<img src="images/event-post-image/post-3.jpg" alt="Event Post">
+												</div><!-- /.event-img -->
+											</div><!-- /.event-content  -->
+										</div><!-- /.item col-md-12 -->
+
+										<div class="item col-md-12">
+											<div class="event-content">
+												<h4 class="content-title">
+													<a href="#">Event Title Goes Here</a>
+												</h4><!-- /.event-title -->
+												<div class="event-date-time-place">
+													<time datetime="2014-06-30">
+														<span><i class="fa fa-clock-o"></i></span> Aguste 29, 2014 at 3pm to 6pm
+													</time>
+													
+													<span><i class="fa fa-map-marker"></i></span> Place: Bronx NY, Unites States
+												</div> 
+												<div class="event-img">
+													<img src="images/event-post-image/post-4.jpg" alt="Event Post">
+												</div><!-- /.event-img -->
+											</div><!-- /.event-content  -->
+										</div><!-- /.item col-md-12 -->
+
+
+									</div><!-- /#event-post-slider -->
+
+								</div><!-- /.event-container-->
+							</div><!-- /.row -->
+						</div><!-- /.com-md-8 -->
+					</div><!-- /.row --> 
+				</div><!-- /.container -->
+				<div class="bottom-angle"></div>
+			</div><!-- /.upcoming-events-section -->
+		</section><!-- /.upcoming-events -->	
+		<!--Upcoming Events Section End-->
+
+
+
+
+
+		<!-- Clients Section -->
+		<section id="clients">
+			<div class="clients-section parallax-style">
+				<div class="parallax-overlay dark-overlay section-padding">
+					<div class="container">
+						<div class="section-head">
+							<h3 class="parallax-title">
+								Our Partners
+							</h3>
+						</div><!-- /.section-head -->
+
+						<div class="row">
+							<div class="clients-logo">
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-1.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-2.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-3.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-4.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+							</div><!-- /.clients-logo -->
+						</div><!-- /.low -->
+					</div><!-- /.container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.clients-section -->
+		</section><!-- /#clients -->
+		<!-- Clients Section End -->
+
+
+
+		
+		<!-- Contact Section -->
+		<section id="contact">
+			<div class="contact-section  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							Contact
+						</h2>
+						<p class="section-description">
+							IF YOU FEEL, NEED WORKING FOR CHILD PLEASE CONTACT WITH US AND LET US KNOW HOW YOU LIKE TO WORK FOR THEM. CONTENT WITH US IF ANY MORE INFORMATION NEEDED.
+						</p>
+					</div><!-- /.section-head -->
+				</div><!-- /.container -->
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="contact-form-container">
+								<h3 class="content-title">
+									Drop us a message
+								</h3>
+
+								<form class="contact-form" id="contact-form" action="http://demos.codexcoder.com/heal/heal-v2/email.php" method="post">
+									<div id="name_error" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!">
+										Please enter your name.
+									</div><!-- /#name_error -->
+									<div class="input-container li_user">
+										<input type="text" class="form-control" name="name" id="name" placeholder="Name" required="">
+									</div><!-- /.input-container-->
+
+									<div id="email_error" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!">
+										Please enter your valid E-mail ID.
+									</div><!-- /#email_error -->
+									<div class="input-container li_mail">
+										<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="">
+									</div><!-- /.input-container -->
+
+									<div id="message_error" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!">
+										Please enter your message.
+									</div><!-- /#message_error -->
+									<div class="input-container li_pen">
+										<textarea class="form-control" id="message" name="message" cols="45" placeholder="Message" rows="6"></textarea>
+									</div><!-- /.input-container -->
+                                    <div id="mail_success" class="success">
+
+										<img src="./Heal HTML Template_files/success.png" alt="Success!">
+										Your message has been sent successfully.
+									</div><!-- /#mail_success -->
+
+									<div id="mail_fail" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!"> Sorry, error occured this time sending your message.
+									</div><!-- /#mail_fail -->
+
+									<button type="submit" class="btn custom-btn" id="send_message">Submit</button>
+								</form><!-- /.contact-form -->
+
+							</div><!-- /.contact-form-container -->
+						</div><!-- /.col-md-6 -->
+
+						<div class="col-md-6">
+							<div class="contact-info">
+								<h3 class="content-title">
+									Contact Info
+								</h3>
+								<p class="content-description">
+									If you need more charity website templates or this charity website template contact with us. We will help you to make successful any of your charity works. Feel free to contact with us through mail address.
+								</p>
+								<address> 
+									<ul class="contact-address">
+										<li class="fa-map-marker">
+											13/2 Elizabeth St, Melbourne VIC 3000, Australia 
+										</li>
+										<li class="fa-phone">
+											+61 3146 8728, +61 0987 6543
+										</li>
+										<li class="fa-envelope">
+											support@envato.net
+										</li>
+									</ul><!-- /.contact-address --> 
+								</address>
+							</div><!-- /.contact-info -->
+						</div><!-- /.col-md-6 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+				<div class="bottom-angle">
+				</div><!-- /.bottom-angle -->
+			</div><!-- /.contact-section -->
+		</section><!-- /#contact -->
+		<!-- Contact Section End -->
+
+
+
+		<!-- Scroll to Top -->
+		<div id="scroll-to-top">
+			<div class="hex scroll-top">
+				<span><i class="fa fa-chevron-up"></i></span>
+			</div>
+		</div><!-- /#scroll-to-top -->
+		<!-- Scroll to Top End-->	
+
+
+
+
+		<!-- Footer Section -->
+		<footer id="footer-section" class="gray-bg">
+			<div class="footer-section">
+				<div class="container">
+					<div class="footer-social-btn pull-right">
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="facebook-btn"><i class="fa fa-facebook"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="github-btn"><i class="fa fa-github-alt"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="vimeo-btn"><i class="fa fa-vimeo-square"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="pinterest-btn"><i class="fa fa-pinterest"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="google-plus-btn"><i class="fa fa-google-plus"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="youtube-btn"><i class="fa fa-youtube"></i></a>
+	pdate					<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="dribbble-btn"><i class="fa fa-dribbble"></i></a>
+						<a href="http://demos.codexcoder.com/heal/heal-v2/#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+					</div><!-- /.footer-social-btn -->
+					<div class="copyrights pull-left">
+						© <a href="http://demos.codexcoder.com/heal/heal-v2/#">Heal</a> 2014, Developed by <a href="http://www.codexcoder.com/">CodexCoder</a>
+					</div><!-- /.copyrights -->
+
+					
+				</div><!-- /.container -->
+			</div><!-- /.footer-section -->
+		</footer><!-- /#footer-section -->
+		<!-- Footer Section End -->
+
+
+        <script src="{% static "js/jquery-2.1.0.min.js" %}"></script>
+        <script src="{% static "js/email-validation.js" %}"></script>
+        <script src="{% static "js/jquery.visible.min.js" %}"></script>
+		<script src="{% static "js/plugins.js" %}"></script>
+		<script src="{% static "js/jquery.parallax.js" %}"></script>
+		<script src="{% static "js/functions.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+		<script src="{% static "js/gmap3.js" %}"></script>
+        {% render_block "js" %}
+		<script type="text/javascript">
+
+			/*---------------------- Current Menu Item -------------------------*/
+			jQuery(document).ready(function($) {
+				"use strict";
+
+				$('#main-menu #headernavigation').onePageNav({
+					currentClass: 'active',
+					changeHash: false,
+					filter: '',
+					easing: 'swing'
+				});
+
+
+				/*----------- Google Map - with support of gmaps.js ----------------*/
+				function isMobile() { 
+					return ('ontouchstart' in document.documentElement);
+				}
+
+				function init_gmap() {
+					if ( typeof google == 'undefined' ) return;
+					var options = {
+						center: [23.709921, 90.407143],
+						zoom: 15,
+						mapTypeControl: true,
+						mapTypeControlOptions: {
+							style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+						},
+						navigationControl: true,
+						scrollwheel: false,
+						streetViewControl: true
+					}
+
+					if (isMobile()) {
+						options.draggable = false;
+					}
+
+					$('#googleMaps').gmap3({
+						map: {
+							options: options
+						},
+						marker: {
+							latLng: [23.709921, 90.407143],
+							options: { icon: 'assets/images/mapicon.png' }
+						}
+					});
+				}
+
+				init_gmap();
+
+			});
+		</script>
+
+
+
+</body><object id="bb6a88e8-7b0b-8dbe-eb68-199f48b488a5" width="0" height="0" type="application/gas-events-uni"></object></html>
