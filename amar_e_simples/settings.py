@@ -144,6 +144,8 @@ INSTALLED_APPS = (
     'menus',
     'sekizai',
     'treebeard',
+    'imagekit',
+    'adminsortable2',
     'djangocms_style',
     'djangocms_column',
     'djangocms_file',
@@ -156,8 +158,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'amar_e_simples',
-    'apps.event',
-    'apps.titles'
+    'apps.titles',
+    'apps.photo_slider',
 )
 
 LANGUAGES = (

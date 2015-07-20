@@ -1,0 +1,21 @@
+{% load static sekizai_tags %}
+
+<div class="media-content media-right from-bottom delay-600">
+    <div class="meida-container">
+        <div id="about-img-carousel" class="about-img-carousel carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              {% for photo in photos %}
+                <li data-target="#about-img-carousel" data-slide-to="{{ forloop.counter0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+              {% endfor %}
+            </ol><!-- /.carousel-indicators -->
+
+            <div class="carousel-inner">
+                {% for photo in photos %}
+                    <div class="item{% if forloop.first %} active{% endif %}">
+                        <img width="{{ photo.image.width }}" height="{{ photo.image.height }}" src="{{ photo.image.url }}" alt="{{ photo.description }}">
+                    </div><!-- /.item -->
+                {% endfor %}
+            </div><!-- /.carousel-inner -->
+        </div><!-- /#about-img-carousel -->
+    </div><!-- /.meida-container -->
+</div><!-- /.media-content -->
