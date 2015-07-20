@@ -160,8 +160,10 @@
 									{% placeholder "nossa_historia" %}
                 </div><!-- /.content-box -->
 
-								<div class="col-md-4">
-									{% placeholder "nossa_historia_extra" %}
+								<div class="col-md-4 media-content media-right from-bottom delay-600">
+									<div class="meida-container">
+										{% placeholder "nossa_historia_extra" %}
+									</div>
 								</div><!-- /.media-content -->
 							</div><!-- row -->
 						</div><!-- /.section-content -->
@@ -174,9 +176,7 @@
 						<div class="row">
 							<div class="section-content">
 								<div class="media-content media-left col-md-4 from-bottom delay-200">
-									<div class="meida-container video-container">
-										<img src="{% static "images/logo_valores.png" %}">
-									</div><!-- /.meida-container -->
+									{% placeholder "nossa_missao_extra" %}
 								</div><!-- /.media-content -->
 
 								<div class="content-box col-md-8 from-bottom delay-600">
@@ -185,13 +185,7 @@
 											<span class="li_eye"></span>
 										</div>
 									</div>
-									<h3 class="content-title">Nossa missão</h3>
-									<p>
-										<strong>Mudar a postura do voluntariado jovem no Brasil, promovendo caminhos de ação contínua, em que todos são tratados de igual para igual.</strong>
-									</p>
-									<p>
-										Buscamos incentivar os jovens a desenvolver sua capacidade de fazer o bem ao próximo pela doação do seu tempo e das suas habilidades. Procuramos apresentar o trabalho voluntário para cada novo integrante e esperamos que ele desenvolva o interesse por buscar parcerias, por coordenar propostas de trabalho e por incentivar voluntários em potencial a participar. Queremos multiplicar o voluntariado jovem no Brasil.
-									</p>
+									{% placeholder "nossa_missao" %}
 								</div><!-- /.content-box -->
 							</div><!-- /.section-content -->
 						</div><!-- /.row -->
@@ -213,14 +207,7 @@
 				<div class="top-angle">
 				</div><!-- /.top-angle -->
 				<div class="container">
-					<div class="section-head">
-						<h2 class="section-title">
-							O que fazemos
-						</h2>
-						<p class="section-description">
-							Os participantes da ONG podem realizar diversas ações, que vão desde doação de sangue até projetos para auxiliar na recuperação de condenados. A intenção é oferecer, a todos os grupos carentes da sociedade, capacitação, atividades culturais e de lazer constantemente!
-						</p>
-					</div><!-- /.section-head -->
+					{% placeholder projetos_titulo %}
 
 					<div class="section-content">
 						<div class="row">
