@@ -157,9 +157,11 @@ INSTALLED_APPS = (
     'djangocms_teaser',
     'djangocms_video',
     'reversion',
+    'redactor',
     'amar_e_simples',
     'apps.titles',
     'apps.photo_slider',
+    'apps.projects',
 )
 
 LANGUAGES = (
@@ -212,3 +214,7 @@ MIGRATION_MODULES = {
     'djangocms_teaser': 'djangocms_teaser.migrations_django',
     'djangocms_video': 'djangocms_video.migrations_django'
 }
+
+# Redactor options
+REDACTOR_OPTIONS = {'lang': 'en'}
+REDACTOR_UPLOAD = 'uploads/'

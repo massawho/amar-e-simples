@@ -5,6 +5,8 @@ django-appconf==1.0.1
 django-classy-tags==0.6.2
 django-cms==3.1.2
 django-imagekit==3.2.6
+django-realtime==1.1
+django-redactoreditor==1.2.10
 django-reversion==1.8.5
 django-sekizai==0.8.2
 Django-Select2==4.3.1

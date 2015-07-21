@@ -1116,6 +1116,9 @@ a.donate:hover {
 
 /* 9 - Service Section
 ------------------------------------------------------------------------*/
+.service-box h3 {
+    margin-top: 20px
+}
 .service-box {
 	max-width: 450px;
 	margin: auto;
