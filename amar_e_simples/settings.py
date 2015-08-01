@@ -81,9 +81,9 @@ LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'America/Sao_Paulo'
 
-USE_I18N = False
+USE_I18N = True
 
-USE_L10N = False
+USE_L10N = True
 
 USE_TZ = True
 
@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'djangocms_admin_style',
     'djangocms_text_ckeditor',
     'django.contrib.auth',
+    'polymorphic',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.admin',
@@ -158,10 +159,12 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'redactor',
+    'embed_video',
     'amar_e_simples',
     'apps.titles',
     'apps.photo_slider',
     'apps.projects',
+    'apps.news',
 )
 
 LANGUAGES = (
@@ -189,8 +192,9 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    ('page.html', 'Page'),
-    ('feature.html', 'Page with Feature')
+    ('home.html', 'Home page'),
+    ('page.html', 'Normal page'),
+    ('show_children.html', 'Show list with children pages')
 )
 
 CMS_PERMISSION = True

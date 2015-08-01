@@ -1,0 +1,67 @@
+{% extends 'base_internal.html' %}
+
+{% block content %}
+
+    <div class="container blog-page-container">
+        <div class="row">
+            <div id="blog-section" class="blog-section col-md-8">
+              {% for n in news %}
+                <!-- Post Box -->
+                <div class="row post-box">
+                    <div class="col-sm-2">
+                        <div class="publish-date">
+                            <p class="day">{{ n.publication_date|date:'d' }}</p>
+                            <p class="month-year"><time datetime="{{ n.publication_date|date:'Y-m-d' }}">{{ n.publication_date|date:'M y' }}</time></p>
+                        </div><!-- /.publish-date -->
+
+                        <div class="post-category">
+                            <span><i class="fa fa-{% if n.is_audio %}music{% elif n.is_text %}file-text-o{% else %}film{% endif %}"></i></span>
+                        </div><!-- /.post-category -->
+                    </div><!-- /.col-sm-2 -->
+
+                    <div class="col-sm-10">
+                        <article class="post-content">
+
+                            <figure class="featured-image">
+                                <img src="{{ n.photo_cover.url }}" alt="featured image">
+                            </figure>
+
+                            <h2 class="post-title">
+                                <a href="{% url 'news-show' slug=n.slug %}">{{ n.title }}</a>
+                            </h2>
+                            <p>
+                                {{ n.description }}
+                            </p>
+
+                            <a class="btn read-more" href="{% url 'news-show' slug=n.slug %}">Leia mais</a>
+
+                        </article> <!-- /.post-content -->
+                    </div><!-- /.col-sm-10 -->
+                </div><!-- /#post-box --><!-- /.row -->
+                <!-- Post Box End-->
+              {% endfor %}
+
+
+            </div><!-- /#blog-section -->
+
+
+            <aside id="blog-sidebar" class="col-md-4 blog-sidebar">
+                <h3 class="title">
+                    Projetos
+                </h3>
+                <div class="tagcloud">
+                    <a href="#">Mother</a>
+                    <a href="#">Children</a>
+                    <a href="#">Donation</a>
+                    <a href="#">Nature</a>
+                    <a href="#">See World</a>
+                    <a href="#">Donner</a>
+                    <a href="#">Forest</a>
+                    <a href="#">Poor Baby</a>
+                    <a href="#">Wield</a>
+                    <a href="#">Orphan</a>
+                </div><!-- /.tagcloud -->
+            </aside><!-- /#blog-sidebar -->
+        </div> <!-- /.row -->
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'news/news_parent_detail.html' %}
+{% load embed_video_tags %}
+{% block icon %}<i class="fa fa-music"></i>{% endblock %}
+{% block featured_image %}
+  <div class="featured-image">
+    {% video item.sound_cloud_link '620x400' %}
+  </div>
+{% endblock %}

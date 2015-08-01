@@ -1,0 +1,568 @@
+{% extends "base_home.html" %}
+{% load cms_tags staticfiles %}
+{% block content %}
+		<!-- Top Slider -->
+		<section id="top-section">
+			<div class="top-section parallax-style">
+				<div class="parallax-overlay">
+					<div class="slider-txt-container">
+						<div id="top-carousel" class="carousel slide" data-ride="carousel">
+
+							<ol class="carousel-indicators">
+								<li data-target="#top-carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#top-carousel" data-slide-to="1"></li>
+								<li data-target="#top-carousel" data-slide-to="2"></li>
+							</ol><!-- /.carousel-indicators -->
+							<div class="carousel-inner">
+
+								<div class="item active">
+									<h2 class="thin-txt">
+										Buscamos incentivar jovens<br>
+										<span class="bold-txt">
+											a fazer o bem 
+										</span><br>
+										pela doação de tempo e habilidades
+									</h2><!-- /.thin-text -->
+
+									<p class="link">
+										<a href="#" class="btn custom-btn ">Saiba mais</a>
+									</p>
+								</div><!-- /.item -->
+
+								<div class="item">
+									<h2 class="thin-txt">
+										Queremos mudar a postura do<br>
+										<span class="bold-txt">
+											voluntariado jovem no Brasil
+										</span><br>
+										seja voluntário!
+									</h2>
+
+									<p class="link">
+										<a href="#" class="btn custom-btn ">Saiba mais</a>
+									</p>
+								</div><!-- /.item -->
+
+								<div class="item">
+									<h2 class="thin-txt">
+										Oito entre dez jovens no país<br>
+										<span class="bold-txt">
+											nunca se envolveram com voluntariado
+										</span><br>
+										Vamos mudar este cenário!
+									</h2><!-- /.thin-text -->
+
+									<p class="link">
+										<a href="#" class="btn custom-btn ">Seja voluntário</a>
+									</p>
+								</div><!-- /.item -->
+							</div><!-- /.carousel-inner -->
+							<a class="slide-nav left" href="#top-carousel" data-slide="prev"><span></span></a>
+							<a class="slide-nav right" href="#top-carousel" data-slide="next"><span></span></a>
+						</div><!-- /#top-carousel -->
+					</div><!-- /.slider-txt-container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.top-section -->
+		</section><!-- /#top-section -->
+		<!-- Top Slider End-->
+
+
+
+		<!-- About Section -->
+		<section id="sobre">
+			<div class="about-section"> 
+				<div class="white-bg  section-padding">
+					<div class="top-angle">
+					</div><!-- /.top-angle -->
+					<div class="container">
+						{% placeholder "nossa_historia_titulo" %}
+
+						<div class="section-content">
+							<div class="row">
+								<div class="content-box col-md-8 from-bottom delay-200">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span class="li_bulb"></span>
+										</div>
+									</div><!-- /.content-icon-hex -->
+									{% placeholder "nossa_historia" %}
+                </div><!-- /.content-box -->
+
+								<div class="col-md-4 media-content media-right from-bottom delay-600">
+									<div class="meida-container">
+										{% placeholder "nossa_historia_extra" %}
+									</div>
+								</div><!-- /.media-content -->
+							</div><!-- row -->
+						</div><!-- /.section-content -->
+					</div><!-- /.container -->
+				</div><!-- /.white-bg -->
+
+				<div class="gray-bg  section-padding">
+					<div class="top-angle"></div>
+					<div class="container">
+						<div class="row">
+							<div class="section-content">
+								<div class="media-content media-left col-md-4 from-bottom delay-200">
+									{% placeholder "nossa_missao_extra" %}
+								</div><!-- /.media-content -->
+
+								<div class="content-box col-md-8 from-bottom delay-600">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span class="li_eye"></span>
+										</div>
+									</div>
+									{% placeholder "nossa_missao" %}
+								</div><!-- /.content-box -->
+							</div><!-- /.section-content -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+
+					<div class="bottom-angle">				
+					</div><!-- /.bottom-angle -->
+
+				</div><!-- ./gray-bg -->
+			</div><!-- /.about-section -->
+		</section><!-- /#about-->
+		<!-- About Section End -->
+
+
+
+		<!-- Services Section -->
+		<section id="service">
+			<div class="services-section white-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					{% placeholder projetos_titulo %}
+
+					<div class="section-content">
+						{% placeholder projetos %}
+					</div><!-- /.section-content -->
+				</div><!-- /.container-->
+			</div><!-- /.services-section -->
+		</section><!-- /#services -->
+		<!--Services Section End-->
+
+
+
+
+		<!-- Volunteer Section -->
+		<section id="voluntario">
+			<div class="volunteer-section">
+				<div class="gray-bg section-padding">
+
+					<div class="top-angle">
+					</div><!-- /.top-angle -->
+
+					<div class="container">
+						<div class="row">
+							<div class="section-content">
+								<div class="media-content media-left col-md-4 from-bottom delay-200">
+									<div class="meida-container">
+										{% placeholder "seja_voluntario_extra" %}
+									</div><!-- /.meida-container -->
+								</div><!-- /.media-content -->
+								<div class="content-box col-md-8 from-bottom delay-600">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span aria-hidden="true" class="li_user"></span>
+										</div>
+									</div><!-- /.content-icon-hex -->
+									{% placeholder "seja_voluntario" %}
+								</div><!-- /.content-box -->
+							</div><!-- /.section-content -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+					<div class="bottom-angle">
+					</div><!-- /.bottom-angle -->
+				</div><!-- ./gray-bg -->
+			</div><!-- /.volunteer-section -->
+		</section><!-- /#volunteer -->
+		<!-- Volunteer Section End -->
+
+
+
+
+		<!-- Gallery Section -->
+		<section id="gallery">
+			<div class="gallery-section white-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							Gallery
+						</h2><!-- /.section-title -->
+						<p class="section-description">
+							TAKE A LOOK AT OUR GALLERY TO SEE HOW WE ENDANGER THE CHILD. YOU MAY ALSO SEE OUR WORLDWIDE ACTIVITY AROUND THE GLOBE HOW WE WORKING FOR CHILDREN. 
+						</p>
+					</div><!-- /.section-head -->
+
+					<div id="gallery-container" class="gallery-container">
+						<div class="galleryFilter">
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter="" class="current">All</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-1">Charity</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-2">Nature</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-3">Wildlife</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-4">Video</a>
+							<a href="http://demos.codexcoder.com/heal/heal-v2/#" data-filter=".cat-5">Children</a>
+						</div> <!-- /.galleryFilter -->
+
+						<div class="gallery-item element-from-bottom isotope" style="position: relative; overflow: hidden; height: 400px;">
+							<figure class="item cat-3 cat-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-1.jpg" alt="Item 3">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-1.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-2 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(285px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-2.jpg" alt="Item 4">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-2.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-1 cat-2 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(570px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-3.jpg" alt="Item 1">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-3.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-1 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(855px, 0px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-4.jpg" alt="Item 2">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-4.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-3 cat-1 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-5.jpg" alt="Item 5">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-5.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-4 cat-1 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(285px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-6.jpg" alt="Item 6">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-6.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-3 cat-1 cat-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(570px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-7.jpg" alt="Item 7">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-7.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+
+							<figure class="item cat-4 cat-2 cat-5 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(855px, 200px, 0px); width: 275px; height: 189.5px;">
+								<img src="./Heal HTML Template_files/pr-image-8.jpg" alt="Item 7">
+								<div class="item-link">
+									<a class="link-hex" href="http://demos.codexcoder.com/heal/heal-v2/images/gallery-images/pr-image-8.jpg" data-rel="prettyPhoto">
+										<span>
+											<i class="fa fa-plus"></i>
+										</span>
+									</a>
+								</div><!-- /.item-link -->
+								<figcaption class="item-description">
+									<h4 class="item-title">
+										Title Here
+									</h4><!-- /.item-title -->
+									<p class="gallery-item-description">
+										 Some text about the photo will go here as photo description
+									</p><!-- /.gallery-item-description -->
+								</figcaption>
+							</figure>
+						</div><!-- /.gallery-item -->
+					</div><!-- /gallery-container -->
+				</div><!-- /.container -->
+			</div><!-- /.gallery-section -->
+		</section><!-- /#gallery -->
+		<!-- Gallery Section End -->
+
+
+
+
+		<!--Tweet Section-->
+		<div id="tweet-section">
+			<div class="tweet-section parallax-style">
+				<div class="parallax-overlay section-padding">
+					<div class="container">
+						<blockquote class="tweet-text">
+							Não é o que você faz, mas quanto amor você dedica no que faz que realmente importa.
+						</blockquote><!-- /.tweet-text -->
+						<p class="tweet-time">
+							Madre Teresa de Calcutá
+						</p><!-- /.tweet-time -->
+					</div><!-- /.container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.tweet-section -->
+		</div><!-- /.tweet-section -->
+		<!--Tweet Section End-->
+
+
+
+		<!--News Section-->
+		<section id="imprensa">
+			<div class="news-section white-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							Imprensa
+						</h2><!-- /.section-title -->
+						<p class="section-description">
+							A Amar é simples está sempre agindo! Dê uma olhada nas matérias de jornais que já saímos!
+						</p>
+					</div><!-- /.section-head -->
+
+					{% placeholder "imprensa" %}
+				</div><!-- /.container -->
+			</div><!-- /.news-section -->
+		</section><!-- /#news -->
+		<!--News Section End-->
+
+
+
+
+
+		<!-- Clients Section -->
+		<section id="clients">
+			<div class="clients-section parallax-style">
+				<div class="parallax-overlay dark-overlay section-padding">
+					<div class="container">
+						<div class="section-head">
+							<h3 class="parallax-title">
+								Our Partners
+							</h3>
+						</div><!-- /.section-head -->
+
+						<div class="row">
+							<div class="clients-logo">
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-1.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-2.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-3.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+
+								<div class="col-sm-3">
+									<div class="client-logo">
+										<a href="http://demos.codexcoder.com/heal/heal-v2/#">
+											<img src="./Heal HTML Template_files/client-4.png" alt="Clients Logo">
+										</a>
+									</div><!-- /.client-logo -->
+								</div><!-- /.col-sm-3 -->
+							</div><!-- /.clients-logo -->
+						</div><!-- /.low -->
+					</div><!-- /.container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.clients-section -->
+		</section><!-- /#clients -->
+		<!-- Clients Section End -->
+
+
+
+		
+		<!-- Contact Section -->
+		<section id="contact">
+			<div class="contact-section  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					<div class="section-head">
+						<h2 class="section-title">
+							Contact
+						</h2>
+						<p class="section-description">
+							IF YOU FEEL, NEED WORKING FOR CHILD PLEASE CONTACT WITH US AND LET US KNOW HOW YOU LIKE TO WORK FOR THEM. CONTENT WITH US IF ANY MORE INFORMATION NEEDED.
+						</p>
+					</div><!-- /.section-head -->
+				</div><!-- /.container -->
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="contact-form-container">
+								<h3 class="content-title">
+									Drop us a message
+								</h3>
+
+								<form class="contact-form" id="contact-form" action="http://demos.codexcoder.com/heal/heal-v2/email.php" method="post">
+									<div id="name_error" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!">
+										Please enter your name.
+									</div><!-- /#name_error -->
+									<div class="input-container li_user">
+										<input type="text" class="form-control" name="name" id="name" placeholder="Name" required="">
+									</div><!-- /.input-container-->
+
+									<div id="email_error" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!">
+										Please enter your valid E-mail ID.
+									</div><!-- /#email_error -->
+									<div class="input-container li_mail">
+										<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="">
+									</div><!-- /.input-container -->
+
+									<div id="message_error" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!">
+										Please enter your message.
+									</div><!-- /#message_error -->
+									<div class="input-container li_pen">
+										<textarea class="form-control" id="message" name="message" cols="45" placeholder="Message" rows="6"></textarea>
+									</div><!-- /.input-container -->
+                                    <div id="mail_success" class="success">
+
+										<img src="./Heal HTML Template_files/success.png" alt="Success!">
+										Your message has been sent successfully.
+									</div><!-- /#mail_success -->
+
+									<div id="mail_fail" class="error">
+										<img src="./Heal HTML Template_files/error.png" alt="Error!"> Sorry, error occured this time sending your message.
+									</div><!-- /#mail_fail -->
+
+									<button type="submit" class="btn custom-btn" id="send_message">Submit</button>
+								</form><!-- /.contact-form -->
+
+							</div><!-- /.contact-form-container -->
+						</div><!-- /.col-md-6 -->
+
+						<div class="col-md-6">
+							<div class="contact-info">
+								<h3 class="content-title">
+									Contact Info
+								</h3>
+								<p class="content-description">
+									If you need more charity website templates or this charity website template contact with us. We will help you to make successful any of your charity works. Feel free to contact with us through mail address.
+								</p>
+								<address> 
+									<ul class="contact-address">
+										<li class="fa-map-marker">
+											13/2 Elizabeth St, Melbourne VIC 3000, Australia 
+										</li>
+										<li class="fa-phone">
+											+61 3146 8728, +61 0987 6543
+										</li>
+										<li class="fa-envelope">
+											support@envato.net
+										</li>
+									</ul><!-- /.contact-address --> 
+								</address>
+							</div><!-- /.contact-info -->
+						</div><!-- /.col-md-6 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+				<div class="bottom-angle">
+				</div><!-- /.bottom-angle -->
+			</div><!-- /.contact-section -->
+		</section><!-- /#contact -->
+		<!-- Contact Section End -->
+{% endblock %}

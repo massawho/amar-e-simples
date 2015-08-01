@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load menu_tags %}
+
+{% block content %}
+
+		<div class="container blog-page-container">
+			<div class="row">
+				<div id="blog-section" class="blog-section col-md-8">
+					<!-- Post Box -->
+					<div class="row post-box">
+						<div class="col-sm-2">
+							<div class="publish-date">
+								<p class="day">12</p>
+								<p class="month-year"><time datetime="2014-05-12">May 2014 </time></p>
+							</div><!-- /.publish-date -->
+
+							<div class="post-category">
+								<span><i class="fa fa-picture-o"></i></span>
+							</div><!-- /.post-category -->
+						</div><!-- /.col-sm-2 -->
+
+						<div class="col-sm-10">
+							{% show_menu 1 0 0 0 "_child.html" %}
+							
+						</div><!-- /.col-sm-10 -->
+					</div><!-- /#post-box --><!-- /.row -->
+					<!-- Post Box End-->
+					<!-- Post Box -->
+					<div class="row post-box">
+						<div class="col-sm-2">
+						</div><!-- /.col-sm-2 -->
+
+						<div class="page-navigator col-sm-10">	
+							<!-- Pageination -->
+							<ul class="page-navigation">
+								<li><a href="#" class="page-no pre"><i class="fa fa-angle-left"></i></a></li>
+								<li><a href="#" class="page-no active">1</a></li>
+								<li><a href="#" class="page-no">2</a></li>
+								<li><a href="#" class="page-no">3</a></li>
+								<li><a href="#" class="page-no">4</a></li>
+								<li><a href="#" class="page-no">5</a></li>
+								<li><a href="#" class="page-no next"><i class="fa fa-angle-right"></i></a></li>
+							</ul><!-- /.pagination -->
+							<!-- Pageination End -->	
+
+						</div><!-- /.col-sm-10 -->
+					</div><!-- /#post-box --><!-- /.row -->
+					<!-- Post Box End-->	
+
+
+
+
+				</div><!-- /#blog-section -->
+
+
+				<aside id="blog-sidebar" class="col-md-4 blog-sidebar">
+					<form class="sidebar-search  clearfix" action="#" method="get">
+						<input class="form-control" type="text" name="s" id="s" placeholder="Search" required>
+						<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<div class="widget clearfix">
+						<h3 class="title">
+							Top Categories
+						</h3>
+
+						<ul class="widget-content">
+							<li><a href="#" >ALL</a></li>
+							<li><a href="#" >CHARITY</a></li>
+							<li><a href="#" >NATURE</a></li>
+							<li><a href="#" >WILDLIFE</a></li>
+							<li><a href="#" >CHILDREN</a></li>
+						</ul><!-- /.widget-content -->
+					</div><!-- /.widget -->
+
+
+
+					<div class="widget clearfix">
+						<h3 class="title">
+							Popular Posts
+						</h3>
+
+						<ul class="popular-post">
+							<li>
+								<img src="images/gallery-images/thumb/pr-image-1.jpg" alt="post image"> 
+								<a href="#">Proin gravida nibh vel velit auctor</a><br>
+								<time class="post-meta-element" datetime="2014-03-29">29 March</time> | <a class="popular-post-comment" href="#">29 Comments</a>
+							</li>
+							<li>
+								<img src="images/gallery-images/thumb/pr-image-2.jpg" alt="post image"> 
+								<a href="#">Proin gravida nibh vel velit auctor</a><br>
+								<time class="post-meta-element" datetime="2014-03-29">29 March</time> | <a class="popular-post-comment" href="#">29 Comments</a>
+							</li>
+							<li>
+								<img src="images/gallery-images/thumb/pr-image-3.jpg" alt="post image"> 
+								<a href="#">Proin gravida nibh vel velit auctor</a><br>
+								<time class="post-meta-element" datetime="2014-03-29">29 March</time> | <a class="popular-post-comment" href="#">29 Comments</a>
+							</li>
+						</ul><!-- /.latest-post -->
+					</div><!-- /.widget -->
+
+
+
+					<div class="widget clearfix">
+						<h3 class="title">
+							Tag Clouds
+						</h3>
+						<div class="tagcloud">
+							<a href="#">Mother</a>
+							<a href="#">Children</a>
+							<a href="#">Donation</a>
+							<a href="#">Nature</a>
+							<a href="#">See World</a>
+							<a href="#">Donner</a>
+							<a href="#">Forest</a>
+							<a href="#">Poor Baby</a>
+							<a href="#">Wield</a>
+							<a href="#">Orphan</a>
+						</div><!-- /.tagcloud -->
+					</div><!-- /.widget -->
+
+
+
+
+
+					<div class="widget">
+						<h3 class="title">
+							Archive 
+						</h3>
+
+						<ul class="widget-content">
+							<li><a href="#" >January (11)</a></li>
+							<li><a href="#" >February  (13)</a></li>
+							<li><a href="#" >March (21)</a></li>
+							<li><a href="#" >April (06)</a></li>
+							<li><a href="#" >May (09)</a></li>
+						</ul><!-- /.widget-content -->
+					</div><!-- /.widget -->
+
+
+
+					<div class="widget">
+						<h3 class="title">
+							Text Widget 
+						</h3>
+
+						<p class="widget-content">
+							Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec
+						</p><!-- /.widget-content -->
+					</div><!-- /.widget -->
+
+
+				</aside><!-- /#blog-sidebar -->		
+			</div> <!-- /.row -->
+		</div><!-- /.container -->
+
+{% endblock %}

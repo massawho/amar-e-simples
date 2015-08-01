@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load cms_tags staticfiles %}
+{% block menu %}
+<!-- Main Menu -->
+<div class="main-menu-container navbar-fixed-top">
+    <div id="main-menu" class="navbar navbar-default blog-page" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <!-- responsive navigation -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button> <!-- /.navbar-toggle -->
+                <!-- Logo -->
+                <h1>
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo" src="{%  static "images/logo.png" %}" alt="Logo" rel="home">
+                    </a><!-- /.navbar-brand -->
+                </h1>
+            </div> <!-- /.navbar-header -->
+
+            <nav class="collapse navbar-collapse">
+                <!-- Main navigation -->
+                <ul id="headernavigation" class="nav navbar-nav pull-right">
+                    <li><a href="/">Sobre</a></li>
+                    <li><a href="/">Galeria</a></li>
+                    <li><a href="/">Projetos</a></li>
+                    <li><a href="/">Imprensa</a></li>
+                    <li><a href="/">Events</a></li>
+                    <li><a href="/">Contato</a></li>
+                    <li><a href="/" class="donate">Bénévole</a></li>
+                </ul> <!-- /.nav .navbar-nav -->
+            </nav> <!-- /.navbar-collapse  -->
+        </div> <!-- /.container -->
+    </div><!-- /#main-menu -->
+</div><!-- /.main-menu-container -->
+<!-- Main Menu End -->
+{% endblock %}
