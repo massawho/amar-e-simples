@@ -166,6 +166,7 @@ INSTALLED_APPS = (
     'apps.projects',
     'apps.news',
     'apps.social_media',
+    'apps.contact_form',
 )
 
 LANGUAGES = (

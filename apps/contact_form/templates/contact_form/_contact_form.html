@@ -1,0 +1,23 @@
+{% load sekizai_tags %}
+
+<form action="{% url 'send_email' %}" onsubmit="return false;" method="post" id="contact_form" data-required="true">
+    {% csrf_token %}
+    <div class="input-field">
+        {{form.name}}
+    </div>
+    <div class="input-field">
+        {{form.email}}
+    </div>
+    <div class="input-field message">
+        {{form.message}}
+    </div>
+    <input type="submit" data-loading-text="ENVIANDO..." class="btn btn-yellow pull-right" value="ENVIAR MENSAGEM" id="msg-submit">
+</form>
+
+{% addtoblock "css" %}
+    {{ form.media.css }}
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+    {{ form.media.js }}
+{% endaddtoblock %}

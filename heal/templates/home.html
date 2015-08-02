@@ -491,71 +491,13 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="contact-form-container">
-								<h3 class="content-title">
-									Drop us a message
-								</h3>
-
-								<form class="contact-form" id="contact-form" action="http://demos.codexcoder.com/heal/heal-v2/email.php" method="post">
-									<div id="name_error" class="error">
-										<img src="./Heal HTML Template_files/error.png" alt="Error!">
-										Please enter your name.
-									</div><!-- /#name_error -->
-									<div class="input-container li_user">
-										<input type="text" class="form-control" name="name" id="name" placeholder="Name" required="">
-									</div><!-- /.input-container-->
-
-									<div id="email_error" class="error">
-										<img src="./Heal HTML Template_files/error.png" alt="Error!">
-										Please enter your valid E-mail ID.
-									</div><!-- /#email_error -->
-									<div class="input-container li_mail">
-										<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="">
-									</div><!-- /.input-container -->
-
-									<div id="message_error" class="error">
-										<img src="./Heal HTML Template_files/error.png" alt="Error!">
-										Please enter your message.
-									</div><!-- /#message_error -->
-									<div class="input-container li_pen">
-										<textarea class="form-control" id="message" name="message" cols="45" placeholder="Message" rows="6"></textarea>
-									</div><!-- /.input-container -->
-                                    <div id="mail_success" class="success">
-
-										<img src="./Heal HTML Template_files/success.png" alt="Success!">
-										Your message has been sent successfully.
-									</div><!-- /#mail_success -->
-
-									<div id="mail_fail" class="error">
-										<img src="./Heal HTML Template_files/error.png" alt="Error!"> Sorry, error occured this time sending your message.
-									</div><!-- /#mail_fail -->
-
-									<button type="submit" class="btn custom-btn" id="send_message">Submit</button>
-								</form><!-- /.contact-form -->
-
+                              {% placeholder "contato" %}
 							</div><!-- /.contact-form-container -->
 						</div><!-- /.col-md-6 -->
 
 						<div class="col-md-6">
 							<div class="contact-info">
-								<h3 class="content-title">
-									Contact Info
-								</h3>
-								<p class="content-description">
-									If you need more charity website templates or this charity website template contact with us. We will help you to make successful any of your charity works. Feel free to contact with us through mail address.
-								</p>
-								<address> 
-									<ul class="contact-address">
-										<li class="fa-map-marker">
-											13/2 Elizabeth St, Melbourne VIC 3000, Australia 
-										</li>
-										<li class="fa-phone">
-											+61 3146 8728, +61 0987 6543
-										</li>
-										<li class="fa-envelope">
-											support@envato.net
-										</li>
-									</ul><!-- /.contact-address --> 
-								</address>
+								{% placeholder "contato_extra" %}
 							</div><!-- /.contact-info -->
 						</div><!-- /.col-md-6 -->
 					</div><!-- /.row -->

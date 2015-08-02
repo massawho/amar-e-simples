@@ -1,0 +1,22 @@
+{% load sekizai_tags %}
+
+<form action="{% url 'send_email' %}" onsubmit="return false;" method="post" id="contact_form" data-required="true" class="contact-form">
+    <div class="input-container li_user">
+        {{form.name}}
+    </div>
+    <div class="input-container li_mail">
+        {{form.email}}
+    </div>
+    <div class="input-container li_pen">
+        {{form.message}}
+    </div>
+    <input type="submit" data-loading-text="ENVIANDO..." class="btn custom-btn angle-effect" value="ENVIAR MENSAGEM" id="msg-submit">
+</form><!-- /.contact-form -->
+
+{% addtoblock "css" %}
+    {{ form.media.css }}
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+    {{ form.media.js }}
+{% endaddtoblock %}
