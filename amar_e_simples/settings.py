@@ -165,6 +165,7 @@ INSTALLED_APPS = (
     'apps.photo_slider',
     'apps.projects',
     'apps.news',
+    'apps.social_media',
 )
 
 LANGUAGES = (

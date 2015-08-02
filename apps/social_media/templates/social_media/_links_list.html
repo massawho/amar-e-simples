@@ -1,0 +1,6 @@
+<h3>{{title}}</h3>
+<ul class="text-center list-inline">
+{% for social_link in social_links %}
+	<li><a target="_blank" href="{{social_link.link}}"><i class="fa fa-{{social_link.social_type}} fa-lg"></i></a></li>
+{% endfor %}
+</ul>
