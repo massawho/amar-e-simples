@@ -1124,6 +1124,10 @@ a.donate:hover {
 	margin: auto;
 }
 
+.service-row {
+    margin-bottom: 50px;
+}
+
 .service-box:hover .service-icon-hex ,
 .service-box:hover .service-icon-hex:before, 
 .service-box:hover .service-icon-hex:after {

@@ -6,7 +6,7 @@ from adminsortable2.admin import SortableAdminMixin
 
 
 class ProjectAdmin(SortableAdminMixin, admin.ModelAdmin):
-
+    prepopulated_fields = {"slug": ("name",)}
     exclude = ['photo_thumbnail']
     formfield_overrides = {
         models.TextField: {'widget': AdminRedactorEditor},

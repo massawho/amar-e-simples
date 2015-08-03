@@ -17,6 +17,14 @@ class Project(models.Model):
         help_text=_('Name of the project')
     )
 
+    slug = models.SlugField(
+        _('Slug'),
+        max_length=45,
+        null=False,
+        blank=False,
+        help_text=_('A unique name to identify this news.')
+    )
+
     description = models.CharField(
         _('Description'),
         blank=False,

@@ -1,0 +1,28 @@
+{% extends 'base_internal.html' %}
+
+{% block content %}
+
+  <div class="container blog-page-container white-bg">
+    {% for project in projects %}
+      {% if forloop.counter0|divisibleby:2 %}<div class="row service-row">{% endif %}
+        <div class="col-md-6 from-bottom delay-200">
+          <div class="service-box">
+            <img src="{{ project.photo_thumbnail.url }}" class="{{ project.name }}" class="img-responsive">
+            <h3 class="service-title content-title">
+              {{ project.name }}
+            </h3><!-- /.service-title content-title -->
+            <p class="service-description">
+              {{ project.description }}
+            </p><!-- /.service-description -->
+
+            <div class="services-button">
+              <a href="{% url 'project-show' project.slug %}" class="btn custom-btn ">
+                Leia mais
+              </a>
+            </div><!-- /.services-button -->
+          </div><!-- /.service-box -->
+        </div><!-- /.col-md-4 -->
+      {% if forloop.last or forloop.counter|divisibleby:2 %}</div>{% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 {% for project in projects %}
-  {% if forloop.counter0|divisibleby:3 %}<div class="row">{% endif %}
+  {% if forloop.counter0|divisibleby:3 %}<div class="row service-row">{% endif %}
     <div class="col-md-4 from-bottom delay-200">
         <div class="service-box">
             <img src="{{ project.photo_thumbnail.url }}" class="{{ project.name }}" class="img-responsive">
@@ -11,11 +11,11 @@
             </p><!-- /.service-description -->
 
             <div class="services-button">
-                <a href="#" class="btn custom-btn ">
+                <a href="{% url 'project-show' project.slug %}" class="btn custom-btn ">
                     Leia mais
                 </a>
             </div><!-- /.services-button -->
         </div><!-- /.service-box -->
     </div><!-- /.col-md-4 -->
   {% if forloop.last or forloop.counter|divisibleby:3 %}</div>{% endif %}
-  {% endfor %}
+{% endfor %}
