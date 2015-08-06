@@ -13,11 +13,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Project',
             fields=[
-                ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
-                ('name', models.CharField(verbose_name='Name', max_length=45, help_text='Name of the project')),
-                ('description', models.CharField(verbose_name='Description', max_length=255, help_text='Give a brief description for the project')),
+                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=45, help_text='Name of the project', verbose_name='Name')),
+                ('slug', models.SlugField(max_length=45, help_text='A unique name to identify this news.', verbose_name='Slug')),
+                ('description', models.CharField(max_length=255, help_text='Give a brief description for the project', verbose_name='Description')),
                 ('photo', models.ImageField(upload_to='project')),
-                ('text', models.TextField(verbose_name='Text', help_text='Describe the project.')),
+                ('text', models.TextField(help_text='Describe the project.', verbose_name='Text')),
+                ('order', models.PositiveIntegerField(default=0)),
+                ('active', models.BooleanField(default=True, help_text='Is this project still active?', verbose_name='Active?')),
             ],
+            options={
+                'ordering': ['order'],
+            },
         ),
     ]
