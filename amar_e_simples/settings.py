@@ -151,7 +151,7 @@ INSTALLED_APPS = (
     'djangocms_column',
     'djangocms_file',
     'djangocms_flash',
-    'djangocms_googlemap',
+    #'djangocms_googlemap',
     'djangocms_inherit',
     'djangocms_link',
     'djangocms_picture',
@@ -212,7 +212,7 @@ DATABASES = {
 MIGRATION_MODULES = {
     'djangocms_column': 'djangocms_column.migrations_django',
     'djangocms_flash': 'djangocms_flash.migrations_django',
-    'djangocms_googlemap': 'djangocms_googlemap.migrations_django',
+    #'djangocms_googlemap': 'djangocms_googlemap.migrations_django',
     'djangocms_inherit': 'djangocms_inherit.migrations_django',
     'djangocms_link': 'djangocms_link.migrations_django',
     'djangocms_style': 'djangocms_style.migrations_django',
