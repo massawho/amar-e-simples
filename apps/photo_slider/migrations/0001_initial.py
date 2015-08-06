@@ -8,7 +8,6 @@ import imagekit.models.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '0013_auto_20150717_2233'),
     ]
 
     operations = [
