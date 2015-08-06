@@ -10,7 +10,6 @@ import datetime
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '0013_auto_20150717_2233'),
         ('contenttypes', '0002_remove_content_type_name'),
     ]
 
