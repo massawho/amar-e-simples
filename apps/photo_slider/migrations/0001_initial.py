@@ -15,10 +15,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Photo',
             fields=[
-                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
-                ('description', models.CharField(max_length=60, help_text='Briefly, give a description of this photo.', verbose_name='Description')),
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('description', models.CharField(verbose_name='Description', max_length=60, help_text='Briefly, give a description of this photo.')),
                 ('item_order', models.PositiveIntegerField(default=0)),
-                ('image', imagekit.models.fields.ProcessedImageField(upload_to='photo_sliders/photos', help_text='Upload a photo. The photo must have at least 360x270px and will be cropped.')),
+                ('image', imagekit.models.fields.ProcessedImageField(help_text='Upload a photo. The photo must have at least 360x270px and will be cropped.', upload_to='photo_sliders/photos')),
             ],
             options={
                 'ordering': ['item_order'],
@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='SliderPluginConfig',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(to='cms.CMSPlugin', parent_link=True, auto_created=True, primary_key=True, serialize=False)),
+                ('cmsplugin_ptr', models.OneToOneField(to='cms.CMSPlugin', serialize=False, primary_key=True, parent_link=True, auto_created=True)),
             ],
             options={
                 'abstract': False,
@@ -37,6 +37,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='photo',
             name='plugin',
-            field=models.ForeignKey(to='photo_slider.SliderPluginConfig', related_name='associated_item'),
+            field=models.ForeignKey(related_name='associated_item', to='photo_slider.SliderPluginConfig'),
         ),
     ]
