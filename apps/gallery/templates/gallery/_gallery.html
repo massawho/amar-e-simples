@@ -1,0 +1,25 @@
+{% load static sekizai_tags %}
+
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+{% for gallery in galleries %}
+<div class="blueimp-gallery-links">
+    {% for photo in gallery.photo_set.all %}
+        <a href="{{ photo.image.url }}" title="{{ photo.description }}">
+            <img src="{{ photo.image.crop.327x222.url }}" alt="{{ photo.description }}">
+        </a>
+    {% endfor %}
+</div>
+{% endfor %}
+
+{% addtoblock "js" %}
+    <script type="text/javascript" src="{% static 'gallery-init.js' %}"></script>
+{% endaddtoblock %}

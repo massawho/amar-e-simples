@@ -1480,6 +1480,8 @@ a.donate:hover {
 	margin-top: -40px;
 	z-index: 2;
 	padding: 0 15px;
+  text-align: left;
+  height: 275px;
 }
 
 .gallery-item figure:hover .item-description {
@@ -2542,3 +2544,27 @@ article blockquote {
 
 /* 24 - Element Appear Effect End
 ---------------------------------------------------------------------- */
+
+
+.blueimp-gallery-links {
+  text-align: center;
+}
+
+.blueimp-gallery-links > a {
+    width: 25%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    display: none;
+}
+
+.blueimp-gallery-links > a img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.blueimp-gallery-links figure:hover {
+  cursor: pointer;
+}

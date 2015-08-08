@@ -28,6 +28,8 @@
         <link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
         <!-- Important prettyPhoto stylesheet -->
         <link rel="stylesheet" href="{% static "css/prettyPhoto.css" %}">
+        <!-- Important blueimp stylesheet -->
+        <link rel="stylesheet" href="{% static "css/blueimp-gallery.min.css" %}">
         <!-- favicon -->
         <link rel="shortcut icon" href="{% static "images/favicon.png" %}">
     </head>
@@ -72,64 +74,24 @@
 
 
         <script src="{% static "js/jquery-2.1.0.min.js" %}"></script>
-        <script src="{% static "js/email-validation.js" %}"></script>
         <script src="{% static "js/jquery.visible.min.js" %}"></script>
 		<script src="{% static "js/plugins.js" %}"></script>
 		<script src="{% static "js/jquery.parallax.js" %}"></script>
 		<script src="{% static "js/functions.js" %}"></script>
-		<script src="{% static "js/main.js" %}"></script>
-		<script src="{% static "js/gmap3.js" %}"></script>
+        <script src="{% static 'blueimp-gallery.min.js' %}"></script>
+        <script src="{% static 'gallery-init.js' %}"></script>
         {% render_block "js" %}
 		<script type="text/javascript">
 
 			/*---------------------- Current Menu Item -------------------------*/
 			jQuery(document).ready(function($) {
 				"use strict";
-
 				$('#main-menu #headernavigation').onePageNav({
 					currentClass: 'active',
 					changeHash: false,
 					filter: '',
 					easing: 'swing'
 				});
-
-
-				/*----------- Google Map - with support of gmaps.js ----------------*/
-				function isMobile() { 
-					return ('ontouchstart' in document.documentElement);
-				}
-
-				function init_gmap() {
-					if ( typeof google == 'undefined' ) return;
-					var options = {
-						center: [23.709921, 90.407143],
-						zoom: 15,
-						mapTypeControl: true,
-						mapTypeControlOptions: {
-							style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-						},
-						navigationControl: true,
-						scrollwheel: false,
-						streetViewControl: true
-					}
-
-					if (isMobile()) {
-						options.draggable = false;
-					}
-
-					$('#googleMaps').gmap3({
-						map: {
-							options: options
-						},
-						marker: {
-							latLng: [23.709921, 90.407143],
-							options: { icon: 'assets/images/mapicon.png' }
-						}
-					});
-				}
-
-				init_gmap();
-
 			});
 		</script>
 

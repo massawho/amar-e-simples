@@ -159,6 +159,7 @@ INSTALLED_APPS = (
     'djangocms_video',
     'reversion',
     'redactor',
+    'ajaximage',
     'embed_video',
     'amar_e_simples',
     'apps.titles',
@@ -168,6 +169,7 @@ INSTALLED_APPS = (
     'apps.social_media',
     'apps.contact_form',
     'apps.quotes',
+    'apps.gallery',
 )
 
 LANGUAGES = (
@@ -225,3 +227,11 @@ MIGRATION_MODULES = {
 # Redactor options
 REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD = 'uploads/'
+
+VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
+    'gallery_photo': [
+        ('thumb', 'crop__327x222'),
+        ('large_horizontal', 'thumbnail__960x720'),
+        ('large_vertical', 'thumbnail__720x960')
+    ]
+}
