@@ -1,0 +1,27 @@
+<h3 class="parallax-title">
+    Nossos parceiros
+</h3>
+
+
+<div class="row">
+  <div class="clients-logo">
+      {% for sponsor in sponsors %}
+        <div class="col-sm-3">
+            <div class="client-logo">
+                <a href="{{ sponsor.sponsor_website }}" target="_blank">
+                    <img src="{{ sponsor.sponsor_logo.url }}" alt="{{ sponsor.sponsor }}">
+                </a>
+            </div><!-- /.client-logo -->
+        </div><!-- /.col-sm-3 -->
+      {% empty %}
+        <div class="about-parallax">
+            <p class="parallax-description">
+                Quer ser nosso parceiro? Nos envie um e-mail!<br>
+            </p>
+            <p><a href="#contato" class="btn custom-btn"">Saiba mais</a></p>
+          </div>
+
+      {% endfor %}
+  </div><!-- /.clients-logo -->
+</div><!-- /.low -->
+

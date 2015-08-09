@@ -170,6 +170,7 @@ INSTALLED_APPS = (
     'apps.contact_form',
     'apps.quotes',
     'apps.gallery',
+    'apps.sponsor',
 )
 
 LANGUAGES = (
