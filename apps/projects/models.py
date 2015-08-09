@@ -42,6 +42,11 @@ class Project(models.Model):
         processors=[ResizeToFill(360, 180)],
     )
 
+    photo_display = ImageSpecField(
+        source='photo',
+        processors=[ResizeToFill(70, 70)],
+    )
+
     text = models.TextField(
         _('Text'),
         blank=False,

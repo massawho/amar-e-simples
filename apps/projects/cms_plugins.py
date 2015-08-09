@@ -14,5 +14,15 @@ class ProjectsPlugin(CMSPluginBase, ):
         return context
 
 
+class ProjectsWidgetPlugin(CMSPluginBase, ):
+    module = _("Widgets")
+    name = _("List projects")
+    render_template = "projects/_widget_list_all.html"
+
+    def render(self, context, instance, placeholder):
+        context['projects'] = Project.objects.all()
+        return context
+
 # Plugins registration
 plugin_pool.register_plugin(ProjectsPlugin)
+plugin_pool.register_plugin(ProjectsWidgetPlugin)

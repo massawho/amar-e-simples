@@ -61,6 +61,11 @@ class News(PolymorphicModel):
         processors=[ResizeToFill(555, 300)],
     )
 
+    photo_display = ImageSpecField(
+        source='photo',
+        processors=[ResizeToFill(70, 70)],
+    )
+
     photo_cover = ImageSpecField(
         source='photo',
         processors=[ResizeToFill(620, 330)],

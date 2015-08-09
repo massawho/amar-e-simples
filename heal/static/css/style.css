@@ -734,6 +734,7 @@ time {
 	border-color:#fff;
 	border-radius: 0;
 	clear: both;
+  min-height: 90px;
 }
 .navbar-brand {
 	height: 80px;
@@ -2288,7 +2289,8 @@ blockquote.post-blockquote:before{
 }
 
 .popular-post li {
-	padding-bottom: 30px;
+	margin-bottom: 30px;
+  height: 70px;
 }
 
 .popular-post img {

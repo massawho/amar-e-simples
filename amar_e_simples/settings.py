@@ -198,8 +198,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('home.html', 'Home page'),
-    ('page.html', 'Normal page'),
-    ('show_children.html', 'Show list with children pages')
+    ('sidebar_page.html', 'Page with sidebar'),
 )
 
 CMS_PERMISSION = True

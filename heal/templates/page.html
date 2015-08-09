@@ -1,1 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_internal.html" %}
+{% load cms_tags %}
+{% block container %}
+  <div class="container">
+    {% placeholder "conteudo_pagina" %}
+  </div>
+{% endblock %}
