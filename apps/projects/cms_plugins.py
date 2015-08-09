@@ -21,6 +21,7 @@ class ProjectsWidgetPlugin(CMSPluginBase, ):
 
     def render(self, context, instance, placeholder):
         context['projects'] = Project.objects.all()
+        context['title'] = "Projetos"
         return context
 
 # Plugins registration

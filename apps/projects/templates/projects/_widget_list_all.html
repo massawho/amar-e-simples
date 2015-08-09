@@ -1,12 +1,12 @@
 <div class="widget clearfix">
     <h3 class="title">
-        Projetos
+        {{ title }}
     </h3>
 
     <ul class="popular-post">
       {% for project in projects %}
         <li>
-            <img src="{{ project.photo_display.url }}" alt="{{ project.name }}">
+            <a href="{% url 'project-show' project.slug %}"><img src="{{ project.photo_display.url }}" alt="{{ project.name }}"></a>
             <a href="{% url 'project-show' project.slug %}">{{ project.name}}</a><br>
         </li>
       {% endfor %}

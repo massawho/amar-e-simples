@@ -12,3 +12,8 @@ class ProjectsListView(ListView):
 class ViewProject(DetailView):
     model = Project
     context_object_name = 'project'
+
+    def get_context_data(self, **kwargs):
+        context = super(ViewProject, self).get_context_data(**kwargs)
+        context['other_projects'] = Project.objects.exclude(slug=self.kwargs['slug'])
+        return context
