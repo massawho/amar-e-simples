@@ -26,13 +26,14 @@ class SocialMediaPlugin(CMSPluginBase):
 
 
 class FacebookPagePlugin(CMSPluginBase):
+
+    module = _("Social Media")
     name = _("Facebook page plugin")
     model = FacebookPagePluginConfig
-    module = _("Social Media")
     render_template = "social_media/_facebook_page_plugin.html"
 
     def render(self, context, instance, placeholder):
-        context['instance'] = instance.facebook_page
+        context['page'] = instance.facebook_page
         return context
 
 
