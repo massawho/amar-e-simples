@@ -5,7 +5,7 @@
   <div class="container blog-page-container white-bg">
     {% for project in projects %}
       {% if forloop.counter0|divisibleby:2 %}<div class="row service-row">{% endif %}
-        <div class="col-md-6 from-bottom delay-200">
+        <div class="col-md-6 from-bottom delay-{% cycle "200" "600" "1000" %}">
           <div class="service-box">
             <img src="{{ project.photo_thumbnail.url }}" class="{{ project.name }}" class="img-responsive">
             <h3 class="service-title content-title">
