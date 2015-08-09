@@ -2232,6 +2232,10 @@ blockquote.post-blockquote:before{
 	margin-top: 75px;
 }
 
+.blog-sidebar .widget:first-child {
+  margin-top: 0;
+}
+
 .blog-sidebar .sidebar-title{
 	font-size: 1.25em;
 	margin: 0 0 15px 0;
