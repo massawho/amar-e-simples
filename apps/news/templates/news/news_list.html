@@ -1,4 +1,5 @@
 {% extends 'base_internal.html' %}
+{% load cms_tags %}
 
 {% block content %}
 
@@ -46,21 +47,7 @@
 
 
             <aside id="blog-sidebar" class="col-md-4 blog-sidebar">
-                <h3 class="title">
-                    Projetos
-                </h3>
-                <div class="tagcloud">
-                    <a href="#">Mother</a>
-                    <a href="#">Children</a>
-                    <a href="#">Donation</a>
-                    <a href="#">Nature</a>
-                    <a href="#">See World</a>
-                    <a href="#">Donner</a>
-                    <a href="#">Forest</a>
-                    <a href="#">Poor Baby</a>
-                    <a href="#">Wield</a>
-                    <a href="#">Orphan</a>
-                </div><!-- /.tagcloud -->
+              {% static_placeholder "news_sidebar" %}
             </aside><!-- /#blog-sidebar -->
         </div> <!-- /.row -->
     </div>
