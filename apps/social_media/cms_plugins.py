@@ -34,3 +34,4 @@ class FacebookPagePlugin(CMSPluginBase):
 
 # Plugins registration
 plugin_pool.register_plugin(SocialMediaPlugin)
+plugin_pool.register_plugin(FacebookPagePlugin)
