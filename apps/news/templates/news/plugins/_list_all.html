@@ -3,7 +3,7 @@
     {% if forloop.counter0|divisibleby:'2' %}
     <div class="row">
     {% endif %}
-      <div class="news-item col-md-6 from-bottom delay-200">
+      <div class="news-item col-md-6 from-bottom delay-{% cycle "200" "600" "1000" %}">
         <a href="{% url 'news-show' slug=n.slug %}"><img class="news-item-image" src="{{ n.photo_thumbnail.url }}" alt="{{ n.title }}"></a>
         <article class="news-article">
           <div class="article-container">
