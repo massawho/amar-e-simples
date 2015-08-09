@@ -32,7 +32,7 @@ class FacebookPagePlugin(CMSPluginBase):
     render_template = "social_media/_facebook_page_plugin.html"
 
     def render(self, context, instance, placeholder):
-        context['instance'] = instance.page
+        context['instance'] = instance.facebook_page
         return context
 
 
