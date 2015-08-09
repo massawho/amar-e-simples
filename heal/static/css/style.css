@@ -2229,11 +2229,7 @@ blockquote.post-blockquote:before{
 }
 
 .blog-sidebar .widget{
-	margin-top: 75px;
-}
-
-.blog-sidebar .widget:first-child {
-  margin-top: 0;
+	margin-bottom: 75px;
 }
 
 .blog-sidebar .sidebar-title{
