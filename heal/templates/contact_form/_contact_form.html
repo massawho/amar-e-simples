@@ -1,6 +1,7 @@
 {% load sekizai_tags %}
 
 <form action="{% url 'send_email' %}" onsubmit="return false;" method="post" id="contact_form" data-required="true" class="contact-form">
+    {% csrf_token %}
     <div class="input-container li_user">
         {{form.name}}
     </div>
