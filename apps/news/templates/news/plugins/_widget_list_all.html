@@ -1,13 +1,15 @@
-<h3 class="title">
-    Imprensa
-</h3>
+<div class="widget clearfix">
+    <h3 class="title">
+        Imprensa
+    </h3>
 
-<ul class="popular-post">
-  {% for n in news %}
-    <li>
-        <img src="{{ n.photo_display.url }}" alt="{{ n.title }}">
-        <a href="#">{{ n.title }}</a><br>
-        <time class="post-meta-element" datetime="{{ n.publication_date|date:"Y-m-d" }}">{{ n.publication_date|date:"d M" }}</time>
-    </li>
-  {% endfor %}
-</ul><!-- /.latest-post -->
+    <ul class="popular-post">
+      {% for n in news %}
+        <li>
+            <img src="{{ n.photo_display.url }}" alt="{{ n.title }}">
+            <a href="#">{{ n.title }}</a><br>
+            <time class="post-meta-element" datetime="{{ n.publication_date|date:"Y-m-d" }}">{{ n.publication_date|date:"d M" }}</time>
+        </li>
+      {% endfor %}
+    </ul><!-- /.latest-post -->
+</div>
