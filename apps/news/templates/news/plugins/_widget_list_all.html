@@ -6,8 +6,8 @@
     <ul class="popular-post">
       {% for n in news %}
         <li>
-            <img src="{{ n.photo_display.url }}" alt="{{ n.title }}">
-            <a href="#">{{ n.title }}</a><br>
+            <a href="{% url 'news-show' slug=n.slug %}"><img src="{{ n.photo_display.url }}" alt="{{ n.title }}"></a>
+            <a href="{% url 'news-show' slug=n.slug %}">{{ n.title }}</a><br>
             <time class="post-meta-element" datetime="{{ n.publication_date|date:"Y-m-d" }}">{{ n.publication_date|date:"d M" }}</time>
         </li>
       {% endfor %}
