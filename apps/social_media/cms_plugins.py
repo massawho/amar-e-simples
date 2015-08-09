@@ -2,7 +2,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 from django.contrib import admin
-from .models import SocialMediaConfig, SocialMediaLink
+from .models import SocialMediaConfig, SocialMediaLink, FacebookPagePluginConfig
 
 
 class SocialMediaLinkInline(admin.TabularInline):
@@ -27,6 +27,7 @@ class SocialMediaPlugin(CMSPluginBase):
 
 class FacebookPagePlugin(CMSPluginBase):
     name = _("Facebook page plugin")
+    model = FacebookPagePluginConfig
     module = _("Social Media")
     render_template = "social_media/_facebook_page_plugin.html"
 

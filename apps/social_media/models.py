@@ -3,13 +3,10 @@ from django.utils.translation import ugettext_lazy as _
 from cms.models import CMSPlugin
 import re
 
-'''
-'''
-
 
 class FacebookPagePluginConfig(CMSPlugin):
 
-    page = models.charField(max_length=20,
+    page = models.CharField(max_length=20,
                             blank=False,
                             null=True,
                             help_text=_("Insert only the facebook page slug."))
