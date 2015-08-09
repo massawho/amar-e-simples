@@ -7,7 +7,7 @@
       {% for project in projects %}
         <li>
             <img src="{{ project.photo_display.url }}" alt="{{ project.name }}">
-            <a href="#">{{ project.name}}</a><br>
+            <a href="{% url 'project-show' project.slug %}">{{ project.name}}</a><br>
         </li>
       {% endfor %}
     </ul><!-- /.latest-post -->
