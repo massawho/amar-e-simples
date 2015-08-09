@@ -6,7 +6,8 @@ import re
 
 class FacebookPagePluginConfig(CMSPlugin):
 
-    page = models.CharField(max_length=20,
+    facebook_page = models.CharField(_("Facebook page"),
+                            max_length=20,
                             blank=False,
                             null=True,
                             help_text=_("Insert only the facebook page slug."))

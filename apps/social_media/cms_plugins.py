@@ -31,6 +31,11 @@ class FacebookPagePlugin(CMSPluginBase):
     module = _("Social Media")
     render_template = "social_media/_facebook_page_plugin.html"
 
+    def render(self, context, instance, placeholder):
+        context['instance'] = instance.page
+        return context
+
+
 
 # Plugins registration
 plugin_pool.register_plugin(SocialMediaPlugin)
