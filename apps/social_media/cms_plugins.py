@@ -5,18 +5,11 @@ from django.contrib import admin
 from .models import SocialMediaConfig, SocialMediaLink
 
 
-'''
-'''
-
-
 class SocialMediaLinkInline(admin.TabularInline):
     model = SocialMediaLink
     exclude = ['social_type']
     min_num = 1
     extra = 1
-
-'''
-'''
 
 
 class SocialMediaPlugin(CMSPluginBase):
@@ -30,6 +23,13 @@ class SocialMediaPlugin(CMSPluginBase):
         context['title'] = instance.title
         context['social_links'] = instance.associated_item.all()
         return context
+
+
+class FacebookPagePlugin(CMSPluginBase):
+    name = _("Facebook page plugin")
+    module = _("Social Media")
+    render_template = "social_media/_facebook_page_plugin.html"
+
 
 # Plugins registration
 plugin_pool.register_plugin(SocialMediaPlugin)

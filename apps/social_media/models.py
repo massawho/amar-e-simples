@@ -7,6 +7,17 @@ import re
 '''
 
 
+class FacebookPagePluginConfig(CMSPlugin):
+
+    page = models.charField(max_length=20,
+                            blank=False,
+                            null=True,
+                            help_text=_("Insert only the facebook page slug."))
+
+    def __str__(self):
+        return self.page
+
+
 class SocialMediaConfig(CMSPlugin):
 
     title = models.CharField(max_length=60,
