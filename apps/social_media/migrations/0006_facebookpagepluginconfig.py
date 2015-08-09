@@ -7,7 +7,6 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '0013_auto_20150717_2233'),
         ('social_media', '0005_auto_20150802_2043'),
     ]
 
