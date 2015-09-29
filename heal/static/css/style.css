@@ -217,7 +217,7 @@ time {
 	font-weight: 700;
 }
 
-.navbar-nav>li.social-link {
+.navbar-nav>li.social-link a {
 	padding: 0 5px;
 }
 /* 2.1 - Section Angle
