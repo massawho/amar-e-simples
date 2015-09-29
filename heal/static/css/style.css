@@ -2554,3 +2554,12 @@ article blockquote {
 .blueimp-gallery-links figure:hover {
   cursor: pointer;
 }
+
+.what-is-to-be {
+	color: #fff;
+}
+
+.what-is-to-be-title {
+	text-align: center;
+	font-style: italic;
+}
