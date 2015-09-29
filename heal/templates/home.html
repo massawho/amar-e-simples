@@ -3,65 +3,8 @@
 {% block content %}
 		<!-- Top Slider -->
 		<section id="top-section">
-			<div class="top-section parallax-style">
-				<div class="parallax-overlay">
-					<div class="slider-txt-container">
-						<div id="top-carousel" class="carousel slide" data-ride="carousel">
-
-							<ol class="carousel-indicators">
-								<li data-target="#top-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#top-carousel" data-slide-to="1"></li>
-								<li data-target="#top-carousel" data-slide-to="2"></li>
-							</ol><!-- /.carousel-indicators -->
-							<div class="carousel-inner">
-
-								<div class="item active">
-									<h2 class="thin-txt">
-										Buscamos incentivar jovens<br>
-										<span class="bold-txt">
-											a fazer o bem 
-										</span><br>
-										pela doação de tempo e habilidades
-									</h2><!-- /.thin-text -->
-
-									<p class="link">
-										<a href="#" class="btn custom-btn ">Saiba mais</a>
-									</p>
-								</div><!-- /.item -->
-
-								<div class="item">
-									<h2 class="thin-txt">
-										Queremos mudar a postura do<br>
-										<span class="bold-txt">
-											voluntariado jovem no Brasil
-										</span><br>
-										seja voluntário!
-									</h2>
-
-									<p class="link">
-										<a href="#" class="btn custom-btn ">Saiba mais</a>
-									</p>
-								</div><!-- /.item -->
-
-								<div class="item">
-									<h2 class="thin-txt">
-										Oito entre dez jovens no país<br>
-										<span class="bold-txt">
-											nunca se envolveram com voluntariado
-										</span><br>
-										Vamos mudar este cenário!
-									</h2><!-- /.thin-text -->
-
-									<p class="link">
-										<a href="#" class="btn custom-btn ">Seja voluntário</a>
-									</p>
-								</div><!-- /.item -->
-							</div><!-- /.carousel-inner -->
-							<a class="slide-nav left" href="#top-carousel" data-slide="prev"><span></span></a>
-							<a class="slide-nav right" href="#top-carousel" data-slide="next"><span></span></a>
-						</div><!-- /#top-carousel -->
-					</div><!-- /.slider-txt-container -->
-				</div><!-- /.parallax-overlay -->
+			<div class="top-section">
+				<img src="{% static 'images/banner.png' %}"
 			</div><!-- /.top-section -->
 		</section><!-- /#top-section -->
 		<!-- Top Slider End-->
@@ -98,31 +41,6 @@
 					</div><!-- /.container -->
 				</div><!-- /.white-bg -->
 
-				<div class="gray-bg  section-padding">
-					<div class="top-angle"></div>
-					<div class="container">
-						<div class="row">
-							<div class="section-content">
-								<div class="media-content media-left col-md-4 from-bottom delay-200">
-									{% placeholder "nossa_missao_extra" %}
-								</div><!-- /.media-content -->
-
-								<div class="content-box col-md-8 from-bottom delay-600">
-									<div class="hex content-icon-hex pull-left">
-										<div class="content-icon">
-											<span class="li_eye"></span>
-										</div>
-									</div>
-									{% placeholder "nossa_missao" %}
-								</div><!-- /.content-box -->
-							</div><!-- /.section-content -->
-						</div><!-- /.row -->
-					</div><!-- /.container -->
-
-					<div class="bottom-angle">				
-					</div><!-- /.bottom-angle -->
-
-				</div><!-- ./gray-bg -->
 			</div><!-- /.about-section -->
 		</section><!-- /#about-->
 		<!-- About Section End -->
@@ -131,7 +49,7 @@
 
 		<!-- Services Section -->
 		<section id="projetos">
-			<div class="services-section white-bg  section-padding">
+			<div class="services-section gray-bg section-padding">
 				<div class="top-angle">
 				</div><!-- /.top-angle -->
 				<div class="container">
@@ -151,7 +69,7 @@
 		<!-- Volunteer Section -->
 		<section id="voluntario">
 			<div class="volunteer-section">
-				<div class="gray-bg section-padding">
+				<div class="white-bg section-padding">
 
 					<div class="top-angle">
 					</div><!-- /.top-angle -->
@@ -183,42 +101,9 @@
 		<!-- Volunteer Section End -->
 
 
-
-
-		<!-- Gallery Section -->
-		<section id="galeria">
-			<div class="gallery-section white-bg  section-padding">
-				<div class="top-angle">
-				</div><!-- /.top-angle -->
-				<div class="container">
-					{% placeholder "galeria_titulo" %}
-
-					{% placeholder "galeria" %}
-				</div><!-- /.container -->
-			</div><!-- /.gallery-section -->
-		</section><!-- /#gallery -->
-		<!-- Gallery Section End -->
-
-
-
-
-		<!--Tweet Section-->
-		<div id="tweet-section">
-			<div class="tweet-section parallax-style">
-				<div class="parallax-overlay section-padding">
-					<div class="container">
-						{% placeholder 'citacoes' %}
-					</div><!-- /.container -->
-				</div><!-- /.parallax-overlay -->
-			</div><!-- /.tweet-section -->
-		</div><!-- /.tweet-section -->
-		<!--Tweet Section End-->
-
-
-
 		<!--News Section-->
 		<section id="imprensa">
-			<div class="news-section white-bg  section-padding">
+			<div class="news-section gray-bg  section-padding">
 				<div class="top-angle">
 				</div><!-- /.top-angle -->
 				<div class="container">
@@ -231,13 +116,10 @@
 		<!--News Section End-->
 
 
-
-
-
 		<!-- Clients Section -->
 		<section id="clients">
-			<div class="clients-section parallax-style">
-				<div class="parallax-overlay section-padding">
+			<div class="clients-section white-bg">
+				<div class="section-padding">
 					<div class="container">
 						{% placeholder "parceiros" %}
 					</div><!-- /.container -->
@@ -251,7 +133,7 @@
 		
 		<!-- Contact Section -->
 		<section id="contato">
-			<div class="contact-section  section-padding">
+			<div class="gray-bg contact-section section-padding">
 				<div class="top-angle">
 				</div><!-- /.top-angle -->
 				<div class="container">

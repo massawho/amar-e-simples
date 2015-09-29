@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from cms.models import CMSPlugin
 import re
+import random
 
 
 class FacebookPagePluginConfig(CMSPlugin):
@@ -38,6 +39,9 @@ class SocialMediaConfig(CMSPlugin):
 
 class SocialMediaLink(models.Model):
 
+    class Meta:
+        ordering = ('item_order',)
+
     SOCIAL_FACEBOOK = 'facebook'
     SOCIAL_TWITTER = 'twitter'
     SOCIAL_LINKEDIN = 'linkedin'
@@ -58,6 +62,12 @@ class SocialMediaLink(models.Model):
     )
 
     plugin = models.ForeignKey(SocialMediaConfig, related_name="associated_item")
+
+    item_order = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False
+    )
 
     link = models.URLField(_('Profile link'),
                            null=False,

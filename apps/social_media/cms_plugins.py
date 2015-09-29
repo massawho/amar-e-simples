@@ -1,6 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
+from adminsortable2.admin import SortableInlineAdminMixin
 from django.contrib import admin
 from .models import SocialMediaConfig, SocialMediaLink, FacebookPagePluginConfig
 
