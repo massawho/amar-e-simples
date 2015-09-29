@@ -165,9 +165,17 @@ time {
 	background-color: #ecf0f1;
 }
 
+.blue-bg {
+	background-color: #83C1E7;
+}
+
 .section-padding {
 	padding-top: 80px;
 	padding-bottom: 60px;
+}
+
+.section-padding.no-bottom {
+	padding-bottom: 0;
 }
 
 .parallax-style .section-padding {
