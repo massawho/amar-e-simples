@@ -217,6 +217,9 @@ time {
 	font-weight: 700;
 }
 
+.social-link {
+	padding: 0 5px;
+}
 /* 2.1 - Section Angle
 ---------------------------------------------*/
 .angular {
@@ -779,6 +782,7 @@ time {
 .navbar-default .navbar-nav>li>a.donate {
 	background-color: #4978BE !important;
 	color: #fff;
+	margin-right: 25px;
 }
 .navbar-default .navbar-nav>li>a.donate:hover, .navbar-default .navbar-nav>li>a.donate:focus {
 	background-color: #6F94CC !important;
@@ -795,23 +799,6 @@ time {
 .navbar-default .navbar-nav>li>a:focus {
 	color: #4878BE;
 }
-.navbar-default.blog-page.navbar-nav>li>a:hover, 
-.navbar-default.blog-page .navbar-nav>li>a:focus {
-	color: #4878BE;
-}
-.navbar-default.blog-page .navbar-nav>.active>a, 
-.navbar-default.blog-page .navbar-nav>.active>a:hover, 
-.navbar-default.blog-page .navbar-nav>.active>a:focus {
-	color: #4878BE;
-	background-color: transparent;
-}
-
-.navbar-default.blog-page .navbar-nav>li>a:hover, 
-.navbar-default.blog-page .navbar-nav>li>a:hover, 
-.navbar-default.blog-page .navbar-nav>li>a:focus {
-	color: #4878BE;
-}
-
 .navbar-default 
 .navbar-toggle {
 	border-color: transparent;
