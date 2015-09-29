@@ -19,33 +19,6 @@ jQuery(window).on('scroll', function (){
 });
 
 
-
-
-/*------------------------- Team Member Slider ----------------------------*/
-var teamSlider = $("#team-slider");
-
-teamSlider.owlCarousel({
-        autoPlay : 3000,
-        stopOnHover : true,
-        pagination : true,
-        paginationNumbers: false,
-
-        itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [600, 1],
-        [700, 2],
-        [1000, 3],
-        [1200, 4],
-        ],
-        // Responsive 
-        responsive: true,
-        responsiveRefreshRate : 200,
-        responsiveBaseWidth: window
-    });
-
-
-
 /*------------------------- Causes Post Slider ----------------------------*/
 var causestSlider = $("#causes-post-slider");
 
@@ -75,64 +48,6 @@ causestSlider.owlCarousel({
       $(".slide-right").click(function(){
         causestSlider.trigger('owl.prev');
       });
-
-
-
-
-/*------------------------- Upcoming Event Slider ----------------------------*/
-var eventSlider = $("#event-post-slider");
-
-eventSlider.owlCarousel({
-        autoPlay : 3000,
-        stopOnHover : true,
-        pagination : false,
-        paginationNumbers: false,
-
-        itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [600, 1],
-        [700, 2],
-        [1000, 2],
-        [1200, 2],
-        ],
-        // Responsive 
-        responsive: true,
-        responsiveRefreshRate : 200,
-        responsiveBaseWidth: window
-    });
-    // Custom Navigation Events
-      $(".slide-left").click(function(){
-        eventSlider.trigger('owl.next');
-      });
-      $(".slide-right").click(function(){
-        eventSlider.trigger('owl.prev');
-      });
-
-
-
-
-
-jQuery(window).load(function($) {
-
-  /*-------------------------------- Parallax ---------------------------------------*/
-  jQuery("#top-section").parallax("50%", 0.5);
-  jQuery("#about-parallax").parallax("50%", 0.5);
-  jQuery("#next-event").parallax("50%", 0.5);
-  jQuery("#testimonial").parallax("50%", 0.5);
-  jQuery("#tweet-section").parallax("50%", 0.5);
-  jQuery("#clients").parallax("50%", 0.5);
-
-  /*------------------------------- Progress Bar---------------------------------------*/
-  jQuery("#about-progress-1").css( "width", "60%" );
-  jQuery("#causes-progress-1").css( "width", "66%" );
-  jQuery("#causes-progress-2").css( "width", "66%" );
-  jQuery("#causes-progress-3").css( "width", "66%" );
-  jQuery("#causes-progress-4").css( "width", "66%" ); 
-
-});
-
-
 
 
 
