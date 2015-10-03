@@ -1,0 +1,15 @@
+<div id="testimonial" class="wow animated slideInLeft">
+    {% for testimonial in testimonials %}
+        {% if not forloop.counter|divisibleby:2 %}<div class="tst-item clearfix">{% endif %}
+        <div class="tst-single clearfix">
+            <img src="/media/{{ testimonial.photo }}" alt="{{ testimonial.name }}" class="img-circle">
+            <div class="tst-content">
+                <p>{{ testimonial.testimonial }}</p>
+                <span>{{ testimonial.name }}</span>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:2 or forloop.last %}</div>{% endif %}
+    {% empty %}
+        <p>Nenhum depoimento foi feito ainda.</p>
+    {% endfor %}
+</div> <!-- end #testimonial -->

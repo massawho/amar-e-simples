@@ -167,6 +167,24 @@ time {
 
 .blue-bg {
 	background-color: #83C1E7;
+  color: #fff
+}
+
+.blue-bg .carousel-indicators li.active {
+  background-color: #4978BE;
+  border: 1px solid #4978BE;
+}
+
+.testimonial-box {
+  padding: 80px 0 100px 0;
+}
+
+.testimonial-box .testimonial-author {
+  text-align: right;
+}
+
+#testimonial-carousel .carousel-indicators {
+  margin-top: 50px
 }
 
 .section-padding {

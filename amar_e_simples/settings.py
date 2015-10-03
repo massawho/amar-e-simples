@@ -164,6 +164,7 @@ INSTALLED_APPS = (
     'amar_e_simples',
     'apps.titles',
     'apps.photo_slider',
+    'apps.testimonials',
     'apps.projects',
     'apps.news',
     'apps.social_media',

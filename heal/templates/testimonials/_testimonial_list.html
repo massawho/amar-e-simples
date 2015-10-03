@@ -1,0 +1,27 @@
+{% if testimonials|length > 0 %}
+<div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        {% for testimonial in testimonials %}
+            <li data-target="#testimonial-carousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+        {% endfor %}
+    </ol><!-- /.carousel-indicators -->
+    <div class="carousel-inner">
+    {% for testimonial in testimonials %}
+
+        {% if not forloop.counter|divisibleby:2 %}<div class="item{% if forloop.first %} active{% endif %}">{% endif %}
+            <div class="col-md-6 testimonial-box from-bottom delay-200">
+                <blockquote class="testimonial-description">
+                    {{ testimonial.testimonial }}
+                </blockquote><!-- /.member-description -->
+                <div class="testimonial-author">{{ testimonial.name }} - {{ testimonial.role }}</div>
+            </div><!-- /.team-member-box -->
+        {% if forloop.counter|divisibleby:2 or forloop.last %}</div>{% endif %}
+
+    {% endfor %}
+    </div>
+</div><!-- /#team-slider -->
+{% else %}
+    <div>
+        <p>Nenhum depoimento foi feito ainda.</p>
+      </div>
+{% endif %}
