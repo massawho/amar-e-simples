@@ -11,7 +11,7 @@ class TestimonialPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         objs = Testimonial.objects.filter(active=True)
         context['testimonials'] = objs
-        context['rage'] = range(objs.length)
+        context['rage'] = range(objs.size/2)
         return context
 
 # Plugins registration
