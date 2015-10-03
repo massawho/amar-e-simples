@@ -9,7 +9,9 @@ class TestimonialPlugin(CMSPluginBase):
     render_template = "testimonials/_testimonial_list.html"
 
     def render(self, context, instance, placeholder):
-        context['testimonials'] = Testimonial.objects.filter(active=True)
+        objs = Testimonial.objects.filter(active=True)
+        context['testimonials'] = objs
+        context['rage'] = range(objs.length)
         return context
 
 # Plugins registration

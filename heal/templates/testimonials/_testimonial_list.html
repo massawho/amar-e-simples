@@ -1,7 +1,7 @@
 {% if testimonials|length > 0 %}
 <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        {% for testimonial in testimonials %}
+        {% for i in 'range' %}
             <li data-target="#testimonial-carousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
         {% endfor %}
     </ol><!-- /.carousel-indicators -->
